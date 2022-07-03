@@ -19,7 +19,9 @@ jobs:
       with:
        node-version-file: .node-version
        check-latest: true
-    - name: Build
+    - name: Install node modules
+      run: npm ci
+    - name: Build static site
       run: npm run build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
