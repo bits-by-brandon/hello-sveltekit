@@ -9,9 +9,6 @@ const config = {
 
 	kit: {
 		adapter: adapter({ precompress: true }),
-		paths: {
-			base: '/hello-sveltekit'
-		},
 		prerender: { default: true },
 		trailingSlash: 'always'
 	}
