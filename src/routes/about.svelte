@@ -12,11 +12,10 @@
 	// since there's no dynamic data here, we can prerender
 	// it so that it gets served as a static asset in prod
 	export const prerender = true;
-
 </script>
 
-<script>
-	export let foo;
+<script lang="ts">
+	export let foo: string;
 </script>
 
 <svelte:head>
