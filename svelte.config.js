@@ -1,5 +1,7 @@
+import path from 'path';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import precompileIntl from 'svelte-intl-precompile/sveltekit-plugin';
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -15,7 +17,12 @@ const config = {
 		paths: {
 			base: dev ? '' : '/hello-sveltekit'
 		},
-		trailingSlash: 'always'
+		trailingSlash: 'always',
+		vite: {
+			plugins: [
+				precompileIntl('locales') // if your translations are defined in /locales/[lang].json
+			]
+		}
 	}
 };
 

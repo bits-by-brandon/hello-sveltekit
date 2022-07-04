@@ -1,0 +1,6 @@
+// The localization file for all text on the site
+{
+	header: {
+		title: 'Spanish'
+	}
+}
