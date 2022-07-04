@@ -1,4 +1,5 @@
 import parser from 'accept-language-parser';
+import { base } from '$app/paths';
 import type { RequestEvent, RequestHandlerOutput } from '@sveltejs/kit';
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '../lib/languageUtils';
 
@@ -15,6 +16,7 @@ export function get({ request }: RequestEvent): RequestHandlerOutput {
 	// Redirect to the default (english) homepage url
 	return {
 		status: 301,
-		headers: { location: `/${redirectLanguage}` }
+		headers: { location: `${base}/${redirectLanguage}` },
+		body: { message: 'redirecting' }
 	};
 }
