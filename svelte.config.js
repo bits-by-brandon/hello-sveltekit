@@ -1,7 +1,7 @@
-import path from 'path';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import precompileIntl from 'svelte-intl-precompile/sveltekit-plugin';
+import { SUPPORTED_LANGUAGES } from './src/lib/languageConfig.js';
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -13,7 +13,10 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		prerender: { default: true },
+		prerender: {
+			default: true,
+			entries: SUPPORTED_LANGUAGES.map((language) => `/${language}`).concat(['/'])
+		},
 		paths: {
 			base: dev ? '' : '/hello-sveltekit'
 		},
