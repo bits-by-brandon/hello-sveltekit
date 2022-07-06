@@ -1,4 +1,5 @@
 <script>
+	import { t } from 'svelte-intl-precompile';
 	import Section from '$lib/components/Section.svelte';
 	import Heading from '$lib/components/Heading.svelte';
 	import Hero from '$lib/components/Hero.svelte';
@@ -13,24 +14,37 @@
 </svelte:head>
 
 <Hero
-	title="The game engine you've been waiting for."
+	title={$t('homepage.hero.title', {
+		default: "The game engine you've been waiting for"
+	})}
 	background="url('/tail-quest-defense-screenshot.png')"
 >
 	<p slot="body">
-		Combine powerful tools with full open-source freedom. Build games your way with Godot.
+		{$t('homepage.hero.body', {
+			default:
+				'Combine powerful tools with full open-source freedom. Build games your way with Godot.'
+		})}
 	</p>
 
-	<Link slot="footer" type="button" href="/download">Download for free</Link>
+	<Link slot="footer" type="button" href="/download">
+		{$t('global.download_free', { default: 'Download for free' })}
+	</Link>
 </Hero>
 
 <Section>
 	<Row>
 		<Column cols="1 / span 2">
-			<Heading supertext="Powerful tools" title="Rethink how you build games">
+			<Heading
+				supertext={$t('homepage.powerful_tools.supertext', { default: 'Powerful tools' })}
+				title={$t('homepage.powerful_tools.title', { default: 'Rethink how you build games' })}
+			>
 				<p slot="body">
-					Godot provides a huge set of common tools, so you can focus on making your game without
-					reinventing the wheel. Godot’s innovative Node and Scene system give you both power and
-					flexibility to create anything.
+					{$t('homepage.powerful_tools.body', {
+						default: `
+						 Godot provides a huge set of common tools, so you can focus on making your game without
+						 reinventing the wheel. Godot’s innovative Node and Scene system give you both power and
+						 flexibility to create anything.`
+					})}
 				</p>
 			</Heading>
 		</Column>
