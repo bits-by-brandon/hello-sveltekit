@@ -1,5 +1,9 @@
 // The localization file for all text on the site
 {
+	nav: {
+		features: 'features',
+		news: 'news'
+	},
 	header: {
 		title: 'Spanish'
 	}

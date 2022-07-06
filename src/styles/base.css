@@ -1,0 +1,25 @@
+:root {
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	--content-width: 1352px;
+	--content-margin: 64px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}

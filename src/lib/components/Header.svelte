@@ -1,100 +1,97 @@
 <script lang="ts">
 	import { t } from 'svelte-intl-precompile';
 	import { page } from '$app/stores';
-	import Link from '$lib/components/Link.svelte';
 	import logo from './godot_logo.svg';
+	import { language } from '$lib/stores/languageStore.js';
+	import Link from '$lib/components/Link.svelte';
+	import Container from '$lib/components/layout/Container.svelte';
 </script>
 
 <header>
-	<div class="corner">
-		<img alt="Godot" src={logo} />
-		<p>{$t('header.title')}</p>
-		<Link href="/">Home</Link>
-	</div>
+	<Container>
+		<div class="outer">
+			<nav>
+				<div class="logo">
+					<Link href="/">
+						<img alt="Godot Logo" src={logo} />
+					</Link>
+				</div>
+				<ul>
+					<li class:active={$page.url.pathname === `/${$language}/features/`}>
+						<Link href="/features">{$t('nav.features')}</Link>
+					</li>
+					<li class:active={$page.url.pathname === `/${$language}/news/`}>
+						<Link href="/news">{$t('nav.news')}</Link>
+					</li>
+				</ul>
+			</nav>
 
-	<nav>
-		<ul>
-			<li class:active={$page.url.pathname === '/about'}>
-				<Link href="/about">About</Link>
-			</li>
-		</ul>
-	</nav>
-
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
-	</div>
+			<Link type="button" href="/download">{$t('global.download')}</Link>
+		</div>
+	</Container>
 </header>
 
 <style>
 	header {
-		display: flex;
-		justify-content: space-between;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		position: sticky;
+		top: 0;
+		background: #1e1d21;
 		width: 100%;
-		height: 100%;
+		z-index: 10;
+	}
+
+	.outer {
+		height: 64px;
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 
 	nav {
 		display: flex;
-		justify-content: center;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		max-width: var(--column-width);
 		--background: rgba(255, 255, 255, 0.7);
+	}
+
+	.logo {
+		margin-right: var(--spacing-64);
+		height: 38px;
+	}
+
+	.logo img {
+		width: 100%;
+		height: 100%;
 	}
 
 	ul {
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
 		display: flex;
+		gap: var(--spacing-16);
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: var(--background);
 		background-size: contain;
 	}
 
 	li {
 		position: relative;
-		height: 100%;
 	}
 
-	li.active::before {
-		--size: 6px;
+	li.active:before {
+		--spacing: --spacing-8;
 		content: '';
-		width: 0;
-		height: 0;
 		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
-	}
-
-	nav a {
-		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 1em;
-		color: var(--heading-color);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
-	}
-
-	a:hover {
-		color: var(--accent-color);
+		left: calc(var(--spacing-8) / -2);
+		top: calc(var(--spacing-8) / -2);
+		width: calc(100% + var(--spacing-8));
+		height: calc(100% + var(--spacing-8));
+		background: var(--accent-color);
+		z-index: -1;
 	}
 </style>

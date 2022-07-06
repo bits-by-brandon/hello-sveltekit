@@ -1,0 +1,14 @@
+:root {
+	/* named colors */
+	--red-300: #f57389;
+	--orange-300: #f6aa78;
+	--teal-300: #67e6bb;
+	--purple-300: #8b6ce1;
+	--cyan-300: #78e5f6;
+	--blue-300: #3d8fcc;
+	--blue-700: #333f67;
+	--blue-800: #1a1f32;
+	--blue-900: #0a1022;
+	--neutral-100: #fff;
+	--neutral-900: #000;
+}
