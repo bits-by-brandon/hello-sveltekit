@@ -4,7 +4,7 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import Column from '$lib/components/layout/Column.svelte';
 	import Row from '$lib/components/layout/Row.svelte';
-	import Link from '../../lib/components/Link.svelte';
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <svelte:head>
