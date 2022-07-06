@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { t } from 'svelte-intl-precompile';
 	import { page } from '$app/stores';
-	import { language } from '$lib/stores/languageStore.ts';
+	import { language } from '$lib/stores/languageStore';
 	import Link from '$lib/components/Link.svelte';
 	import logo from './godot_logo.svg';
 </script>

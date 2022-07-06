@@ -2,7 +2,7 @@
 	import { t } from 'svelte-intl-precompile';
 	import { page } from '$app/stores';
 	import logo from './godot_logo.svg';
-	import { language } from '$lib/stores/languageStore.js';
+	import { language } from '$lib/stores/languageStore';
 	import Link from '$lib/components/Link.svelte';
 	import Container from '$lib/components/layout/Container.svelte';
 </script>
