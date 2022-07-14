@@ -2,8 +2,8 @@
 	"name": "hello-sveltekit",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "./scripts/clean-build.sh && svelte-kit build",
+		"dev": "NODE_ENV=development vite dev",
+		"build": "./scripts/clean-build.sh && vite build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
 		"prepare": "svelte-kit sync",
@@ -18,7 +18,7 @@
 		"@playwright/test": "^1.22.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.34",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.0.0-next.372",
 		"@types/accept-language-parser": "^1.5.3",
 		"@types/cookie": "^0.5.1",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",
@@ -32,7 +32,8 @@
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.6",
 		"tslib": "^2.3.1",
-		"typescript": "^4.7.2"
+		"typescript": "^4.7.2",
+		"vite": "^2.9.14"
 	},
 	"type": "module",
 	"dependencies": {
