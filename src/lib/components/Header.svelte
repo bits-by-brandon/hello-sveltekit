@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { t } from 'svelte-intl-precompile';
+	import { t, locale } from 'svelte-intl-precompile';
 	import { page } from '$app/stores';
 	import logo from './godot_logo.svg';
-	import { language } from '$lib/stores/languageStore';
 	import Link from '$components/Link.svelte';
 	import Container from '$components/layout/Container.svelte';
 </script>
@@ -17,10 +16,10 @@
 					</Link>
 				</div>
 				<ul>
-					<li class:active={$page.url.pathname === `/${$language}/features/`}>
+					<li class:active={$page.url.pathname === `/${$locale}/features/`}>
 						<Link href="/features">{$t('nav.features')}</Link>
 					</li>
-					<li class:active={$page.url.pathname === `/${$language}/news/`}>
+					<li class:active={$page.url.pathname === `/${$locale}/news/`}>
 						<Link href="/news">{$t('nav.news')}</Link>
 					</li>
 				</ul>

@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { locale } from 'svelte-intl-precompile';
 	import { base } from '$app/paths';
-	import { language } from '$stores/languageStore';
 
 	export let href = '';
 	export let type: 'button' | 'link' | 'inline' = 'link';
@@ -8,7 +8,7 @@
 	$: isLink = type === 'link';
 	$: isInline = type === 'inline';
 	$: stripped_href = href.startsWith('/') ? href.slice(1) : href;
-	$: anchor = `${base}/${$language}/${stripped_href}`;
+	$: anchor = `${base}/${$locale}/${stripped_href}`;
 </script>
 
 <a class:isButton class:isLink class:isInline sveltekit:prefetch href={anchor}>
