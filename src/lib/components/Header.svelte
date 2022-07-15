@@ -3,8 +3,8 @@
 	import { page } from '$app/stores';
 	import logo from './godot_logo.svg';
 	import { language } from '$lib/stores/languageStore';
-	import Link from '$lib/components/Link.svelte';
-	import Container from '$lib/components/layout/Container.svelte';
+	import Link from '$components/Link.svelte';
+	import Container from '$components/layout/Container.svelte';
 </script>
 
 <header>

@@ -1,18 +1,21 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { init, register, waitLocale } from 'svelte-intl-precompile';
 	import { browser, dev } from '$app/env';
+	import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from '$lib/languageConfig.js';
 
 	// Hydrate on dev only for hot module replacement
 	export const hydrate = dev;
 	// Use the browser router for fast page transitions
 	export const router = browser;
 
-	register('en', () => import('$locales/en.json'));
-	register('es', () => import('$locales/es.json'));
+	// Register all defined languages
+	for (const languageCode of SUPPORTED_LANGUAGES) {
+		register(languageCode, () => import(`$locales/${languageCode}.json`));
+	}
 
 	export async function load({ params }) {
 		init({
-			fallbackLocale: 'en',
+			fallbackLocale: DEFAULT_LANGUAGE,
 			initialLocale: params.lang
 		});
 		await waitLocale();
@@ -22,8 +25,8 @@
 
 <script lang="ts">
 	import '../../styles/app.css';
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$components/Header.svelte';
+	import Footer from '$components/Footer.svelte';
 </script>
 
 <Header />

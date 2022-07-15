@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
 	import { t } from 'svelte-intl-precompile';
-	import Section from '$lib/components/Section.svelte';
-	import Heading from '$lib/components/Heading.svelte';
-	import Hero from '$lib/components/Hero.svelte';
-	import Column from '$lib/components/layout/Column.svelte';
-	import Row from '$lib/components/layout/Row.svelte';
-	import Link from '$lib/components/Link.svelte';
+	import Section from '$components/Section.svelte';
+	import Heading from '$components/Heading.svelte';
+	import Hero from '$components/Hero.svelte';
+	import Column from '$components/layout/Column.svelte';
+	import Row from '$components/layout/Row.svelte';
+	import Link from '$components/Link.svelte';
 </script>
 
 <svelte:head>
