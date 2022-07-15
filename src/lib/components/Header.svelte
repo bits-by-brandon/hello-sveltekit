@@ -41,7 +41,7 @@
 	}
 
 	.outer {
-		height: 64px;
+		height: 60px;
 		align-items: center;
 		display: flex;
 		flex-direction: row;

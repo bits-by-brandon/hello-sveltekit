@@ -3,6 +3,7 @@
 	--column-margin-top: 4rem;
 	--content-width: 1352px;
 	--content-margin: 64px;
+	--stroke-thickness: 2px;
 }
 
 * {

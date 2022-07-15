@@ -15,10 +15,10 @@
 	<slot />
 </a>
 
-<style>
+<style lang="scss">
 	.isButton {
 		display: inline-block;
-		padding: 12px 24px;
+		padding: var(--spacing-12) var(--spacing-24);
 		color: var(--neutral-100);
 		background: var(--button-primary-background);
 		border-radius: 8px;
@@ -27,6 +27,12 @@
 		box-shadow: 0 0 8px var(--button-primary-background);
 		font-size: var(--text-sm);
 		font-weight: bold;
+		transition: filter 100ms ease-in-out;
+
+		&:hover {
+			text-decoration: none;
+			filter: brightness(120%);
+		}
 	}
 
 	.isInline {

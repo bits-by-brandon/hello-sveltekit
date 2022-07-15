@@ -48,8 +48,7 @@
 		top: 0;
 		bottom: 0;
 		width: var(--spacing-64);
-		height: 2px;
-		border-radius: 2px;
+		height: var(--stroke-thickness);
 		background: var(--section-stroke-color);
 	}
 

@@ -1,17 +1,17 @@
 <script context="module" lang="ts">
 	import { init, register, waitLocale } from 'svelte-intl-precompile';
 	import { browser, dev } from '$app/env';
-	import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from '$lib/languageConfig.js';
+	import { DEFAULT_LANGUAGE } from '$lib/languageConfig.js';
 
 	// Hydrate on dev only for hot module replacement
 	export const hydrate = dev;
 	// Use the browser router for fast page transitions
 	export const router = browser;
 
-	// Register all defined languages
-	for (const languageCode of SUPPORTED_LANGUAGES) {
-		register(languageCode, () => import(`$locales/${languageCode}.json`));
-	}
+	// Register all defined languages. This cannot be a loop, because
+	// vite needs to statically resolve these files
+	register('en', () => import('$locales/en.json'));
+	register('es', () => import('$locales/es.json'));
 
 	export async function load({ params }) {
 		init({
