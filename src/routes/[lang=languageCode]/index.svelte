@@ -13,21 +13,11 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<Hero
-	title={$t('homepage.hero.title', {
-		default: "The game engine you've been waiting for"
-	})}
-	background="url('/tail-quest-defense-screenshot.png')"
->
-	<p slot="body">
-		{$t('homepage.hero.body', {
-			default:
-				'Combine powerful tools with full open-source freedom. Build games your way with Godot.'
-		})}
-	</p>
+<Hero title={$t('homepage.hero.title')} background="url('/tail-quest-defense-screenshot.png')">
+	<p slot="body">{$t('homepage.hero.body')}</p>
 
 	<Link slot="footer" type="button" href="/download">
-		{$t('global.download_free', { default: 'Download for free' })}
+		{$t('global.download')}
 	</Link>
 </Hero>
 
@@ -35,16 +25,11 @@
 	<Row>
 		<Column cols="1 / span 2">
 			<Heading
-				supertext={$t('homepage.powerful_tools.supertext', { default: 'Powerful tools' })}
-				title={$t('homepage.powerful_tools.title', { default: 'Rethink how you build games' })}
+				supertext={$t('homepage.powerful_tools.supertext')}
+				title={$t('homepage.powerful_tools.title')}
 			>
 				<p slot="body">
-					{$t('homepage.powerful_tools.body', {
-						default: `
-						 Godot provides a huge set of common tools, so you can focus on making your game without
-						 reinventing the wheel. Godot’s innovative Node and Scene system give you both power and
-						 flexibility to create anything.`
-					})}
+					{$t('homepage.powerful_tools.body')}
 				</p>
 			</Heading>
 		</Column>
