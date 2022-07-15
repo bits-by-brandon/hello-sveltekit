@@ -17,7 +17,8 @@ const config = {
 			entries: SUPPORTED_LANGUAGES.map((language) => `/${language}`).concat(['/'])
 		},
 		paths: {
-			base: dev ? '' : '/hello-sveltekit'
+			base: dev ? '' : '/hello-sveltekit',
+			assets: dev ? '' : '/hello-sveltekit'
 		},
 		trailingSlash: 'always'
 	}
