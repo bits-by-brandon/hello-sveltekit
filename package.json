@@ -2,11 +2,11 @@
 	"name": "hello-sveltekit",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "NODE_ENV=development vite dev",
+		"dev": "NODE_ENV=development vite",
 		"build": "./scripts/clean-build.sh && vite build",
 		"package": "vite package",
 		"preview": "vite preview",
-		"prepare": "vite sync",
+		"prepare": "svelte-kit sync",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",

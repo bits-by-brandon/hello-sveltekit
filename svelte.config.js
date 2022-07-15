@@ -18,7 +18,6 @@ const config = {
 		},
 		paths: {
 			base: dev ? '' : '/hello-sveltekit',
-			assets: dev ? '' : '/hello-sveltekit'
 		},
 		trailingSlash: 'always'
 	}
