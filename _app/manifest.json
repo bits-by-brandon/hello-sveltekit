@@ -1,12 +1,12 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-369bcd8c.js",
+    "file": "immutable/start-e26cacfa.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-251158ee.js",
-      "_languageConfig-3b74f4f3.js",
-      "_preload-helper-52fa6613.js"
+      "_index-8c8fd9bd.js",
+      "_paths-e9d6e34a.js",
+      "_languageConfig-ba89ef20.js"
     ],
     "dynamicImports": [
       ".svelte-kit/runtime/components/layout.svelte",
@@ -20,40 +20,40 @@
     ]
   },
   ".svelte-kit/runtime/components/layout.svelte": {
-    "file": "immutable/layout.svelte-5abfd714.js",
+    "file": "immutable/layout.svelte-c307386b.js",
     "src": ".svelte-kit/runtime/components/layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-251158ee.js"
+      "_index-8c8fd9bd.js"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "immutable/error.svelte-07365b04.js",
+    "file": "immutable/error.svelte-c779c331.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-251158ee.js"
+      "_index-8c8fd9bd.js"
     ]
   },
   "src/routes/[lang=languageCode]/__layout.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-4cc3b7a6.js",
+    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-69403c7f.js",
     "src": "src/routes/[lang=languageCode]/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_preload-helper-52fa6613.js",
-      "_index-251158ee.js",
-      "_Container-9f4af138.js",
-      "_languageConfig-3b74f4f3.js"
+      "_index-8c8fd9bd.js",
+      "_languageConfig-ba89ef20.js",
+      "_Container-d191fffa.js",
+      "_paths-e9d6e34a.js"
     ],
     "dynamicImports": [
       "$locales/en",
       "$locales/es"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/__layout.svelte-ca3f2a41.css"
+      "immutable/assets/pages/_lang_languageCode_/__layout.svelte-8d964d56.css"
     ],
     "assets": [
       "immutable/assets/godot_logo-c55d6a9b.svg",
@@ -64,96 +64,96 @@
     ]
   },
   "src/routes/[lang=languageCode]/about.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/about.svelte-6e60b2db.js",
+    "file": "immutable/pages/_lang_languageCode_/about.svelte-3f165bc9.js",
     "src": "src/routes/[lang=languageCode]/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-251158ee.js"
+      "_index-8c8fd9bd.js"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/features.svelte-e8cff979.css"
+      "immutable/assets/pages/_lang_languageCode_/about.svelte-db36a650.css"
     ]
   },
   "src/routes/[lang=languageCode]/download.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/download.svelte-01695849.js",
+    "file": "immutable/pages/_lang_languageCode_/download.svelte-440542a6.js",
     "src": "src/routes/[lang=languageCode]/download.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-251158ee.js"
+      "_index-8c8fd9bd.js"
     ],
     "css": [
       "immutable/assets/pages/_lang_languageCode_/download.svelte-48e762b1.css"
     ]
   },
   "src/routes/[lang=languageCode]/features.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/features.svelte-795180d0.js",
+    "file": "immutable/pages/_lang_languageCode_/features.svelte-aed62451.js",
     "src": "src/routes/[lang=languageCode]/features.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-251158ee.js"
+      "_index-8c8fd9bd.js"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/features.svelte-e8cff979.css"
+      "immutable/assets/pages/_lang_languageCode_/about.svelte-db36a650.css"
     ]
   },
   "src/routes/[lang=languageCode]/index.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/index.svelte-69db3d1b.js",
+    "file": "immutable/pages/_lang_languageCode_/index.svelte-4dece2a6.js",
     "src": "src/routes/[lang=languageCode]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-251158ee.js",
-      "_Container-9f4af138.js",
-      "_languageConfig-3b74f4f3.js"
+      "_index-8c8fd9bd.js",
+      "_Container-d191fffa.js",
+      "_paths-e9d6e34a.js"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/index.svelte-52552a63.css"
+      "immutable/assets/pages/_lang_languageCode_/index.svelte-73dadcd2.css"
     ]
   },
   "src/routes/[lang=languageCode]/news.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/news.svelte-76050bd9.js",
+    "file": "immutable/pages/_lang_languageCode_/news.svelte-a9d11aab.js",
     "src": "src/routes/[lang=languageCode]/news.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-251158ee.js"
+      "_index-8c8fd9bd.js"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/features.svelte-e8cff979.css"
+      "immutable/assets/pages/_lang_languageCode_/about.svelte-db36a650.css"
     ]
   },
-  "_index-251158ee.js": {
-    "file": "immutable/chunks/index-251158ee.js"
+  "_index-8c8fd9bd.js": {
+    "file": "immutable/chunks/index-8c8fd9bd.js"
   },
-  "_languageConfig-3b74f4f3.js": {
-    "file": "immutable/chunks/languageConfig-3b74f4f3.js",
+  "_paths-e9d6e34a.js": {
+    "file": "immutable/chunks/paths-e9d6e34a.js",
     "imports": [
-      "_index-251158ee.js"
+      "_index-8c8fd9bd.js"
     ]
   },
-  "_preload-helper-52fa6613.js": {
-    "file": "immutable/chunks/preload-helper-52fa6613.js"
+  "_languageConfig-ba89ef20.js": {
+    "file": "immutable/chunks/languageConfig-ba89ef20.js"
   },
-  "_Container-9f4af138.js": {
-    "file": "immutable/chunks/Container-9f4af138.js",
+  "_Container-d191fffa.js": {
+    "file": "immutable/chunks/Container-d191fffa.js",
     "imports": [
-      "_languageConfig-3b74f4f3.js",
-      "_index-251158ee.js"
+      "_paths-e9d6e34a.js",
+      "_index-8c8fd9bd.js"
     ],
     "css": [
-      "immutable/assets/Container-bb075ae2.css"
+      "immutable/assets/Container-dcc677cb.css"
     ]
   },
   "$locales/en": {
-    "file": "immutable/chunks/en-7ced43dd.js",
+    "file": "immutable/chunks/en-c038868b.js",
     "src": "$locales/en",
     "isDynamicEntry": true
   },
   "$locales/es": {
-    "file": "immutable/chunks/es-76ae4dca.js",
+    "file": "immutable/chunks/es-197bab44.js",
     "src": "$locales/es",
     "isDynamicEntry": true
   }
