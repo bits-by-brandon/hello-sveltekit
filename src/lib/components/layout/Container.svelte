@@ -12,7 +12,7 @@
 	}
 	.inner {
 		max-width: var(--content-width);
-    margin: 0 var(--spacing-64);
+		margin: 0 var(--spacing-64);
 		width: 100%;
 	}
 </style>

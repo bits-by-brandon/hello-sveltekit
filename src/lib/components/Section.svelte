@@ -1,5 +1,5 @@
-<script>
-	import Container from './layout/Container.svelte';
+<script lang="ts">
+	import Container from '$components/layout/Container.svelte';
 </script>
 
 <section>

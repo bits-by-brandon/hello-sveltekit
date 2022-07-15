@@ -3,7 +3,7 @@ name: Static deploy
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ['main']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -13,19 +13,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: setup nodejs
-      uses: actions/setup-node@v3.3.0
-      with:
-       node-version-file: .node-version
-       check-latest: true
-    - name: Install node modules
-      run: npm ci
-    - name: Build static site
-      run: npm run build
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
-
+      - uses: actions/checkout@v3
+      - name: setup nodejs
+        uses: actions/setup-node@v3.3.0
+        with:
+          node-version-file: .node-version
+          check-latest: true
+      - name: Install node modules
+        run: npm ci
+      - name: Build static site
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

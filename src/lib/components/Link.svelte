@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { language } from '$lib/stores/languageStore';
+	import { language } from '$stores/languageStore';
 
 	export let href = '';
 	export let type: 'button' | 'link' | 'inline' = 'link';
@@ -29,9 +29,9 @@
 		font-weight: bold;
 	}
 
-  .isInline {
-    color: var(--link-primary-color);
-  }
+	.isInline {
+		color: var(--link-primary-color);
+	}
 
 	.isLink {
 		color: var(--link-primary-color);

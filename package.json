@@ -4,9 +4,9 @@
 	"scripts": {
 		"dev": "NODE_ENV=development vite dev",
 		"build": "./scripts/clean-build.sh && vite build",
-		"package": "svelte-kit package",
-		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync",
+		"package": "vite package",
+		"preview": "vite preview",
+		"prepare": "vite sync",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",

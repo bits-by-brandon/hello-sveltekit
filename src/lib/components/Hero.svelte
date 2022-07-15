@@ -1,7 +1,7 @@
-<script>
-	import Container from './layout/Container.svelte';
-	import Column from './layout/Column.svelte';
-	import Row from './layout/Row.svelte';
+<script lang="ts">
+	import Container from '$components/layout/Container.svelte';
+	import Column from '$components/layout/Column.svelte';
+	import Row from '$components/layout/Row.svelte';
 
 	export let background = 'var(--background-alt-color)';
 	export let supertext;
@@ -98,6 +98,6 @@
 		font-weight: bold;
 	}
 
-	.footer	{
+	.footer {
 	}
 </style>
