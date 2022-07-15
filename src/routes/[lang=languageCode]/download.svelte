@@ -1,22 +1,14 @@
+<script lang="ts">
+	import Section from '$components/Section.svelte';
+	import Hero from '$components/Hero.svelte';
+</script>
+
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Downloads</title>
 </svelte:head>
 
-<section>
-	<h1>homepage</h1>
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-</style>
+<Section>
+	<Hero title="Downloads">
+		<p slot="body">downloads body</p>
+	</Hero>
+</Section>

@@ -1,37 +1,41 @@
 <script lang="ts">
 	import { t } from 'svelte-intl-precompile';
-	import { page } from '$app/stores';
-	import { locale } from 'svelte-intl-precompile';
 	import Link from '$components/Link.svelte';
+	import Container from '$components/layout/Container.svelte';
 	import logo from './godot_logo.svg';
+	import Row from './layout/Row.svelte';
+	import Column from './layout/Column.svelte';
 </script>
 
 <footer>
-	<nav>
-		<div class="logo">
-			<Link href="/">
-				<img alt="Godot Logo" src={logo} />
-			</Link>
-		</div>
-		<ul>
-			<li class:active={$page.url.pathname === `/${$locale}/features/`}>
-				<Link href="/features">{$t('nav.features')}</Link>
-			</li>
-			<li class:active={$page.url.pathname === `/${$locale}/news/`}>
-				<Link href="/news">{$t('nav.news')}</Link>
-			</li>
-		</ul>
-	</nav>
-
-	<div>
-		<Link type="button" href="/download">Download</Link>
-	</div>
+	<Container>
+		<Row>
+			<Column>
+				<nav>
+					<div class="logo">
+						<Link href="/">
+							<img alt="Godot Logo" src={logo} />
+						</Link>
+					</div>
+					<ul>
+						<li>
+							<Link href="/features">{$t('nav.features')}</Link>
+						</li>
+						<li>
+							<Link href="/news">{$t('nav.news')}</Link>
+						</li>
+					</ul>
+				</nav>
+			</Column>
+		</Row>
+	</Container>
 </footer>
 
 <style>
 	footer {
 		background: var(--neutral-900);
-		height: 320px;
+		min-height: 320px;
+		padding: var(--spacing-64) 0;
 	}
 
 	nav {

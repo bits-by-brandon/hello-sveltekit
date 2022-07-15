@@ -52,11 +52,3 @@
 		</Column>
 	</Row>
 </Section>
-
-<Section>
-	<h1>homepage</h1>
-</Section>
-
-<Section>
-	<h1>homepage</h1>
-</Section>
