@@ -10,6 +10,11 @@
 	import ArticleCarousel from '../../lib/components/ArticleCarousel.svelte';
 	import Image from '../../lib/components/Image.svelte';
 
+	import imageHero from '$assets/images/tail-quest-defense-screenshot.png';
+	import image2D from '$assets/images/2d.png';
+	import image3D from '$assets/images/3d.jpg';
+	import imageLanguage from '$assets/images/language.png';
+
 	export let articles = [];
 </script>
 
@@ -18,10 +23,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<HomepageHero
-	title={$t('homepage.hero.title')}
-	background="url('/images/tail-quest-defense-screenshot.png')"
->
+<HomepageHero title={$t('homepage.hero.title')} backgroundImage={imageHero}>
 	<p slot="body">{$t('homepage.hero.body')}</p>
 
 	<Link slot="footer" type="button" href="/download">
@@ -48,7 +50,7 @@
 	<Row alignItems="flex-start">
 		<Column cols="1 / span 2">
 			<CopyBlock title="Dedicated 2D engine">
-				<Image slot="image" src="/images/2d.png" bordered />
+				<Image slot="image" src={image2D} bordered />
 				<p slot="body">
 					Build crisp and performant 2D games with Godot's dedicated 2D rendering engine with real
 					2D pixel coordinates and 2D nodes. Don't settle for bolted on 2D.
@@ -57,7 +59,7 @@
 		</Column>
 		<Column cols="3 / span 2">
 			<CopyBlock title="Simple and powerful 3D">
-				<Image slot="image" src="/images/3d.jpg" bordered />
+				<Image slot="image" src={image3D} bordered />
 				<p slot="body">
 					Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds
 					and characters.
@@ -78,7 +80,7 @@
 			</CopyBlock>
 		</Column>
 		<Column cols="3 / span 2">
-			<Image src="/images/language.png" bordered animate />
+			<Image src={imageLanguage} bordered animate />
 		</Column>
 	</Row>
 </Section>

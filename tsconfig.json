@@ -14,7 +14,9 @@
 			"$lib/*": ["src/lib/*"],
 			"$components/*": ["src/lib/components/*"],
 			"$stores/*": ["src/lib/stores/*"],
-			"$styles/*": ["src/styles/*"]
+			"$styles/*": ["src/styles/*"],
+			"$assets": ["src/assets"],
+			"$assets/*": ["src/assets/*"]
 		}
 	},
 	"include": ["src/index.d.ts"]

@@ -6,9 +6,12 @@
 	export let background = 'var(--background-alt-color)';
 	export let supertext = '';
 	export let title;
+	export let backgroundImage = '';
 </script>
 
-<div class="hero" style:background-image={background}>
+<div class="hero" style:background>
+	<img src={backgroundImage} alt="" />
+
 	<Container>
 		<Row>
 			<Column cols="1 / span 3">
@@ -57,8 +60,7 @@
 		gap: var(--spacing-24);
 		width: 100%;
 		height: calc(100vh - var(--spacing-32));
-		background-size: cover;
-		background-position: center;
+		overflow: hidden;
 	}
 
 	.hero:before {
@@ -67,6 +69,14 @@
 		inset: 0;
 		background: var(--background-color);
 		opacity: 0.4;
+	}
+
+	img {
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
+		z-index: 0;
+		opacity: 0.75;
 	}
 
 	.upper {
@@ -95,8 +105,5 @@
 		text-transform: uppercase;
 		letter-spacing: 0.1rem;
 		font-weight: bold;
-	}
-
-	.footer {
 	}
 </style>

@@ -8,7 +8,7 @@ const dev = process.env.NODE_ENV === 'development';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: preprocess(),
+	preprocess: [preprocess()],
 
 	kit: {
 		adapter: adapter(),
@@ -17,9 +17,13 @@ const config = {
 			entries: SUPPORTED_LANGUAGES.map((language) => `/${language}`).concat(['/'])
 		},
 		paths: {
-			base: dev ? '' : '/hello-sveltekit',
+			base: dev ? '' : '/hello-sveltekit'
 		},
 		trailingSlash: 'always'
+	},
+
+	experimental: {
+		useVitePreprocess: true
 	}
 };
 
