@@ -1,14 +1,23 @@
-<script>
+<script lang="ts">
+	import AnimatedStroke from './AnimatedStroke.svelte';
+
 	export let supertext;
 	export let title;
 </script>
 
-<div class="heading">
-	<div class="stroke" />
+<div class="copy-block">
+	{#if $$slots.image}
+		<div class="image">
+			<slot name="image" />
+		</div>
+	{/if}
+	<AnimatedStroke />
+
 	<div class="upper">
 		{#if supertext}
 			<span class="supertext">{supertext}</span>
 		{/if}
+
 		{#if title}
 			<h2 class="title">{title}</h2>
 		{/if}
@@ -27,8 +36,8 @@
 	{/if}
 </div>
 
-<style>
-	.heading {
+<style lang="scss">
+	.copy-block {
 		color: var(--text-color);
 		position: relative;
 		display: flex;
@@ -36,27 +45,16 @@
 		gap: var(--spacing-24);
 	}
 
+	.image :global(img) {
+		display: block;
+		object-fit: cover;
+	}
+
 	.upper {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacing-16);
 		position: relative;
-	}
-
-	.stroke {
-		left: 0;
-		top: 0;
-		bottom: 0;
-		width: var(--spacing-64);
-		height: var(--stroke-thickness);
-		background: var(--section-stroke-color);
-	}
-
-	.supertext {
-		color: var(--heading-color);
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-		font-weight: bold;
 	}
 
 	.title {

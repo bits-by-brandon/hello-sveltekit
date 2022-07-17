@@ -8,8 +8,15 @@
 	--cyan-300: #78e5f6;
 	--blue-300: #3d8fcc;
 	--blue-700: #333f67;
-	--blue-800: #1a1f32;
-	--blue-900: #0a1022;
+	--blue-800: #101726;
+	--blue-900: #060a15;
 	--neutral-100: #fff;
+	--neutral-200: #ececec;
+	--neutral-300: #cecece;
+	--neutral-400: #949494;
+	--neutral-500: #777777;
+	--neutral-600: #3f3f3f;
+	--neutral-700: #262626;
+	--neutral-800: #0c0c0c;
 	--neutral-900: #000;
 }

@@ -16,5 +16,6 @@
 			"$stores/*": ["src/lib/stores/*"],
 			"$styles/*": ["src/styles/*"]
 		}
-	}
+	},
+	"include": ["src/index.d.ts"]
 }

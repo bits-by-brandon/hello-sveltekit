@@ -18,7 +18,7 @@
 <style lang="scss">
 	.isButton {
 		display: inline-block;
-		padding: var(--spacing-12) var(--spacing-24);
+		padding: var(--spacing-12) var(--spacing-16);
 		color: var(--neutral-100);
 		background: var(--button-primary-background);
 		border-radius: 8px;

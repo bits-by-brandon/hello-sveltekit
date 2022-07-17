@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Section from '$components/Section.svelte';
-	import Hero from '$components/Hero.svelte';
+	import Hero from '$components/HomepageHero.svelte';
 </script>
 
 <svelte:head>

@@ -34,7 +34,8 @@
 	header {
 		position: sticky;
 		top: 0;
-		background: #1e1d21;
+		background: var(--header-background-color);
+    border-bottom: 1px solid var(--header-border-color);
 		width: 100%;
 		z-index: 10;
 	}
@@ -83,14 +84,14 @@
 	}
 
 	li.active:before {
-		--spacing: --spacing-8;
+		--spacing: var(--spacing-12);
 		content: '';
 		position: absolute;
-		left: calc(var(--spacing-8) / -2);
-		top: calc(var(--spacing-8) / -2);
-		width: calc(100% + var(--spacing-8));
-		height: calc(100% + var(--spacing-8));
-		background: var(--accent-color);
+		left: calc(var(--spacing) / -2);
+		top: calc(var(--spacing) / -2);
+		width: calc(100% + var(--spacing));
+		height: calc(100% + var(--spacing));
+		background: var(--neutral-600);
 		z-index: -1;
 	}
 </style>

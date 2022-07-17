@@ -1,8 +1,12 @@
 :root {
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
+	--column-gap: var(--spacing-48);
+	--content-margin: var(--spacing-64);
 	--content-width: 1352px;
-	--content-margin: 64px;
+	--column-count: 4;
+	--column-width: calc(
+		(var(--content-width) / var(--column-count)) -
+			(var(--column-gap) * var(--column-count) - var(--column-count))
+	);
 	--stroke-thickness: 2px;
 }
 

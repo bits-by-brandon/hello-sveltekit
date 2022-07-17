@@ -3,9 +3,9 @@
 :root {
 	font-family: 'JetBrains Mono', monospace;
 	--text-xl: 6.4em;
-	--text-lg: 3.2em;
-	--text-md: 2.4em;
-	--text-base: 1.2em;
+	--text-lg: 2.4em;
+	--text-md: 1.6em;
+	--text-base: 1.1em;
 	--text-sm: 0.8em;
 	--text-xs: 0.6em;
 }
@@ -38,13 +38,24 @@ h3,
 	font-size: var(--text-md);
 }
 
+h5,
+.supertext {
+	color: var(--heading-color);
+	font-size: var(--text-sm);
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	font-weight: bold;
+}
+
 p,
 .text-base {
 	font-size: var(--text-base);
+	line-height: 1.4;
 }
 
-p {
-	line-height: 1.5;
+.text-sm {
+	font-size: var(--text-sm);
+	line-height: 1.4;
 }
 
 a {

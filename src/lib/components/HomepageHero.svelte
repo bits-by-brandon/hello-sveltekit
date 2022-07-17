@@ -4,7 +4,7 @@
 	import Row from '$components/layout/Row.svelte';
 
 	export let background = 'var(--background-alt-color)';
-	export let supertext;
+	export let supertext = '';
 	export let title;
 </script>
 

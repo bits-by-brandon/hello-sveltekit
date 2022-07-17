@@ -16,6 +16,10 @@
 			supertext: 'Powerful tools',
 			title: 'Rethink how you build games',
 			body: 'Godot provides a huge set of common tools, so you can focus on making your game without reinventing the wheel. Godot’s innovative Node and Scene system give you both power and flexibility to create anything.'
+		},
+		open_source_callout: {
+			title: 'Godot is 100% free and fully Open Source',
+			body: 'Godot is completely free and open-source under the permissive MIT license. Your game is yours, down to the last line of engine code. No royalties, no strings attached.'
 		}
 	}
 }
