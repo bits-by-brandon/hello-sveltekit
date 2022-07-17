@@ -1,8 +1,8 @@
 <script lang="ts">
 	import AnimatedStroke from './AnimatedStroke.svelte';
 
-	export let supertext;
-	export let title;
+	export let supertext = '';
+	export let title = '';
 </script>
 
 <div class="copy-block">

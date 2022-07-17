@@ -2,17 +2,17 @@
 	import IntersectionObserver from './utility/IntersectionObserver.svelte';
 
 	export let src: string;
-	export let alt: string;
+	export let alt = '';
 	export let bordered = false;
 	export let animate = false;
 
-	let intersecting = false;
+	let isIntersecting = false;
 	let imageEl;
 </script>
 
 {#if animate}
-	<IntersectionObserver element={imageEl} bind:intersecting threshold={1} rootMargin="100px" once>
-		<img class="animate" {src} {alt} class:bordered class:intersecting bind:this={imageEl} />
+	<IntersectionObserver element={imageEl} bind:isIntersecting threshold={1} rootMargin="100px" once>
+		<img class="animate" {src} {alt} class:bordered class:isIntersecting bind:this={imageEl} />
 	</IntersectionObserver>
 {:else}
 	<img class:bordered {src} {alt} />
@@ -34,8 +34,13 @@
 		transition-delay: 400ms;
 		transition: all 300ms cubic-bezier(0, 0, 0, 1);
 
-		&.intersecting {
+		&.isIntersecting {
 			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+	@media (prefers-reduced-motion) {
+		.animation {
 			transform: translateY(0);
 		}
 	}

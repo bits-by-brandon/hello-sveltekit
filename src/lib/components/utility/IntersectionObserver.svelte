@@ -13,7 +13,7 @@
 	 * `true` if the observed element
 	 * is intersecting the viewport.
 	 */
-	export let intersecting = false;
+	export let isIntersecting = false;
 
 	/**
 	 * Specify the containing element.
@@ -47,7 +47,7 @@
 			(entries) => {
 				entries.forEach((_entry) => {
 					entry = _entry;
-					intersecting = _entry.isIntersecting;
+					isIntersecting = _entry.isIntersecting;
 				});
 			},
 			{ root, rootMargin, threshold }
@@ -95,4 +95,4 @@
 	});
 </script>
 
-<slot {intersecting} {entry} {observer} />
+<slot {isIntersecting} {entry} {observer} />

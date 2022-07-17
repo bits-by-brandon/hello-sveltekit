@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { t, locale } from 'svelte-intl-precompile';
 	import { page } from '$app/stores';
-	import logo from './godot_logo.svg';
+	import logo from '$assets/images/godot_logo.svg';
 	import Link from '$components/Link.svelte';
 	import Container from '$components/layout/Container.svelte';
 </script>
@@ -35,7 +35,7 @@
 		position: sticky;
 		top: 0;
 		background: var(--header-background-color);
-    border-bottom: 1px solid var(--header-border-color);
+		border-bottom: 1px solid var(--header-border-color);
 		width: 100%;
 		z-index: 10;
 	}

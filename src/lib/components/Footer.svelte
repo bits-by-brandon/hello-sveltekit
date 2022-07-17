@@ -2,7 +2,7 @@
 	import { t } from 'svelte-intl-precompile';
 	import Link from '$components/Link.svelte';
 	import Container from '$components/layout/Container.svelte';
-	import logo from './godot_logo.svg';
+	import logo from '$assets/images/godot_logo.svg';
 	import Row from './layout/Row.svelte';
 	import Column from './layout/Column.svelte';
 </script>

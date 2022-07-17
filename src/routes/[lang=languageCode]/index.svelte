@@ -7,8 +7,9 @@
 	import Row from '$components/layout/Row.svelte';
 	import Link from '$components/Link.svelte';
 	import WideCard from '$components/WideCard.svelte';
-	import ArticleCarousel from '../../lib/components/ArticleCarousel.svelte';
-	import Image from '../../lib/components/Image.svelte';
+	import ArticleCarousel from '$components/ArticleCarousel.svelte';
+	import Image from '$components/Image.svelte';
+	import InteractiveEditor from '$components/InteractiveEditor/InteractiveEditor.svelte';
 
 	import imageHero from '$assets/images/tail-quest-defense-screenshot.png';
 	import image2D from '$assets/images/2d.png';
@@ -42,6 +43,9 @@
 					{$t('homepage.powerful_tools.body')}
 				</p>
 			</CopyBlock>
+		</Column>
+		<Column cols="3 / span 2">
+			<InteractiveEditor />
 		</Column>
 	</Row>
 </Section>
