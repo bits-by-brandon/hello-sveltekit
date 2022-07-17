@@ -72,16 +72,4 @@
 	li {
 		position: relative;
 	}
-
-	li.active:before {
-		--spacing: --spacing-8;
-		content: '';
-		position: absolute;
-		left: calc(var(--spacing-8) / -2);
-		top: calc(var(--spacing-8) / -2);
-		width: calc(100% + var(--spacing-8));
-		height: calc(100% + var(--spacing-8));
-		background: var(--accent-color);
-		z-index: -1;
-	}
 </style>
