@@ -1,28 +1,37 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import IntersectionObserver from '../utility/IntersectionObserver.svelte';
 	import Node from './Node.svelte';
 	import Preview from './Preview.svelte';
 	import sleep from '$lib/util/sleep';
 
-	onMount(async () => {
-		await sleep(2000);
+	async function enableNodes() {
+		await sleep(1500);
+		parentNodeActive = true;
+		await sleep(1200);
 		spriteNodeActive = true;
-		await sleep(2000);
+		await sleep(1200);
 		audioNodeActive = true;
-		await sleep(2000);
+		await sleep(1200);
 		animationNodeActive = true;
-	});
+	}
 
+	let parentNodeActive = false;
 	let spriteNodeActive = false;
 	let audioNodeActive = false;
 	let animationNodeActive = false;
 
 	let isIntersecting = false;
+	$: if (isIntersecting) enableNodes();
 	let containerEl;
 </script>
 
-<IntersectionObserver element={containerEl} bind:isIntersecting threshold={1} rootMargin="100px">
+<IntersectionObserver
+	element={containerEl}
+	bind:isIntersecting
+	threshold={1}
+	rootMargin="100px"
+	once
+>
 	<div class="interactiveEditor" class:isIntersecting bind:this={containerEl}>
 		<svg
 			width="591"
@@ -72,6 +81,27 @@
 		</svg>
 
 		<div class="nodes" class:isIntersecting>
+			<Node
+				x={42}
+				y={42}
+				activeColor="#478CBF"
+				isActive={parentNodeActive}
+				on:click={() => (parentNodeActive = !parentNodeActive)}
+			>
+				<svg
+					width="26"
+					height="26"
+					viewBox="0 0 26 26"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M10.3363 0.000982854C9.30917 0.000982854 8.48232 0.828745 8.48232 1.85692V7.42465C8.48232 8.45283 9.30917 9.28049 10.3363 9.28049H12.1903V11.1182C11.9898 11.1245 11.7918 11.1634 11.6037 11.2332L7.80175 12.5018L6.53434 8.69584C6.41179 8.30888 6.1659 7.97281 5.83432 7.73911C5.50275 7.50541 5.10376 7.38698 4.69852 7.40195C4.40858 7.41252 4.12516 7.49105 3.87106 7.63124C3.61697 7.77143 3.39928 7.96936 3.23551 8.20911C3.07174 8.44885 2.9665 8.72373 2.92818 9.01162C2.88986 9.29952 2.91953 9.59239 3.01487 9.8667L4.86874 15.4344C4.94568 15.6658 5.06745 15.8798 5.22703 16.0641C5.38661 16.2484 5.58088 16.3993 5.79879 16.5084C6.01669 16.6175 6.25396 16.6825 6.49698 16.6997C6.74 16.717 6.98401 16.6861 7.2151 16.6088L10.3365 15.5686V16.7031C10.3365 16.7788 10.3716 16.8442 10.3789 16.917L1.89133 22.5828C1.68436 22.716 1.50596 22.8891 1.36651 23.0921C1.22706 23.295 1.12935 23.5238 1.0791 23.7649C1.02885 24.006 1.02707 24.2548 1.07383 24.4966C1.12059 24.7384 1.21493 24.9686 1.35142 25.1735C1.48792 25.3785 1.6638 25.5542 1.86882 25.6904C2.07384 25.8266 2.30392 25.9206 2.5456 25.9669C2.78729 26.0132 3.03573 26.0109 3.27651 25.9601C3.51729 25.9093 3.74557 25.811 3.94803 25.671L13.3229 19.4146L16.0929 24.9568C16.2924 25.3567 16.6292 25.671 17.0416 25.8421C17.4541 26.0132 17.9143 26.0297 18.3378 25.8884L23.8997 24.0324C24.1374 23.9609 24.3583 23.8423 24.5493 23.6837C24.7404 23.5252 24.8977 23.3298 25.0119 23.1093C25.1262 22.8888 25.195 22.6475 25.2144 22.3998C25.2338 22.1521 25.2033 21.9031 25.1247 21.6675C25.0462 21.4318 24.9212 21.2143 24.7571 21.0279C24.5931 20.8415 24.3933 20.69 24.1697 20.5823C23.946 20.4746 23.7031 20.4129 23.4552 20.401C23.2073 20.389 22.9595 20.427 22.7266 20.5126L18.6892 21.8574L16.8824 18.2365C17.3938 17.9066 17.7514 17.36 17.7514 16.7031V14.8473H20.315L21.6548 17.5333C21.7623 17.7535 21.9124 17.9502 22.0964 18.1121C22.2803 18.2739 22.4944 18.3977 22.7264 18.4762C22.9584 18.5547 23.2036 18.5865 23.4479 18.5697C23.6922 18.5528 23.9308 18.4877 24.1498 18.3781C24.3688 18.2684 24.564 18.1164 24.724 17.9309C24.8841 17.7453 25.0058 17.5298 25.0822 17.2969C25.1586 17.064 25.1881 16.8183 25.1691 16.5739C25.1501 16.3295 25.083 16.0912 24.9715 15.873L23.1175 12.1613C22.9635 11.853 22.7268 11.5937 22.4339 11.4126C22.141 11.2314 21.8035 11.1354 21.4592 11.1354H15.8973V9.2796H17.7511C18.7782 9.2796 19.6051 8.45179 19.6051 7.42362V1.85587C19.6051 0.827722 18.7782 0 17.7511 0L10.3363 0.000982854ZM10.3363 3.71272H12.1903V7.42443H10.3363V3.71272Z"
+						fill="currentColor"
+					/>
+				</svg>
+			</Node>
+
 			<Node
 				x={60}
 				y={76}
@@ -136,7 +166,7 @@
 			</Node>
 		</div>
 
-		<Preview {spriteNodeActive} {animationNodeActive} {audioNodeActive} />
+		<Preview {parentNodeActive} {spriteNodeActive} {animationNodeActive} {audioNodeActive} />
 	</div>
 </IntersectionObserver>
 

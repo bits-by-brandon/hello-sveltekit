@@ -1,13 +1,15 @@
 <script>
+	export let parentNodeActive = false;
 	export let spriteNodeActive = false;
 	export let audioNodeActive = false;
 	export let animationNodeActive = false;
 </script>
 
 <div class="preview" class:animating={animationNodeActive}>
+	<div class="placeholder" class:visible={!spriteNodeActive && parentNodeActive} />
 	<svg
 		class="sprite"
-		class:visible={spriteNodeActive}
+		class:visible={spriteNodeActive && parentNodeActive}
 		width="127"
 		height="118"
 		viewBox="0 0 127 118"
@@ -34,7 +36,7 @@
 
 	<svg
 		class="audio"
-		class:visible={audioNodeActive}
+		class:visible={audioNodeActive && parentNodeActive}
 		width="82"
 		height="82"
 		viewBox="0 0 82 82"
@@ -51,8 +53,43 @@
 </div>
 
 <style lang="scss">
+	.placeholder {
+		width: 1px;
+		height: 100px;
+		position: absolute;
+		left: 353px;
+		top: 150px;
+		opacity: 0;
+		transition: opacity 100ms linear;
+
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:before {
+			background-color: rgb(255, 0, 0);
+			width: 100px;
+			height: 1px;
+		}
+		&:after {
+			background-color: rgb(0, 255, 0);
+			width: 1px;
+			height: 100px;
+		}
+
+		&.visible {
+			opacity: 1;
+		}
+	}
+
 	.preview {
-		color: white;
+		color: var(--text-color);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -65,7 +102,7 @@
 	svg {
 		position: absolute;
 		opacity: 0;
-		transition: opacity 300ms linear;
+		transition: opacity 100ms linear;
 	}
 
 	.sprite {
@@ -87,13 +124,13 @@
 	}
 
 	@keyframes pulse {
-		0% {
+		20% {
 			opacity: 0;
 		}
 		50% {
 			opacity: 1;
 		}
-		100% {
+		80% {
 			opacity: 0;
 		}
 	}
