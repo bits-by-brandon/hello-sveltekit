@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-52a4d774.js",
+    "file": "immutable/start-c89a8293.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -98,7 +98,7 @@
     ]
   },
   "src/routes/[lang=languageCode]/index.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/index.svelte-308f4c7f.js",
+    "file": "immutable/pages/_lang_languageCode_/index.svelte-665d9882.js",
     "src": "src/routes/[lang=languageCode]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -110,7 +110,7 @@
       "_paths-37440658.js"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/index.svelte-1750e525.css"
+      "immutable/assets/pages/_lang_languageCode_/index.svelte-495c268c.css"
     ],
     "assets": [
       "immutable/assets/tail-quest-defense-screenshot-d8bdd54b.png",
