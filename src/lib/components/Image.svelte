@@ -12,10 +12,18 @@
 
 {#if animate}
 	<IntersectionObserver element={imageEl} bind:isIntersecting threshold={1} rootMargin="100px" once>
-		<img class="animate" {src} {alt} class:bordered class:isIntersecting bind:this={imageEl} />
+		<img
+			class="animate"
+			loading="lazy"
+			{src}
+			{alt}
+			class:bordered
+			class:isIntersecting
+			bind:this={imageEl}
+		/>
 	</IntersectionObserver>
 {:else}
-	<img class:bordered {src} {alt} />
+	<img class:bordered loading="lazy" {src} {alt} />
 {/if}
 
 <style lang="scss">
