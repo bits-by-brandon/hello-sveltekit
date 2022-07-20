@@ -13,7 +13,7 @@
 <a class="article-card" href={link}>
 	<div class="meta">
 		{#if date}
-			<span class="date text-sm">{date}</span>
+			<p class="date text-sm">{date}</p>
 		{/if}
 	</div>
 
@@ -33,7 +33,6 @@
 		padding: var(--spacing-24);
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing-24);
 		transition: transform 100ms ease-in-out;
 
 		&:hover {
@@ -54,5 +53,6 @@
 		-webkit-line-clamp: 5;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		margin: 0;
 	}
 </style>

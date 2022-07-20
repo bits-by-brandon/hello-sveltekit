@@ -29,6 +29,7 @@
 
 	h2 {
 		color: var(--text-color);
+		margin: 0;
 	}
 
 	.cards {

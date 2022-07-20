@@ -86,7 +86,6 @@
 	.lower {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing-24);
 		position: relative;
 		padding-left: var(--spacing-24);
 	}

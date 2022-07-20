@@ -59,5 +59,6 @@
 
 	.title {
 		font-size: var(--text-lg);
+		margin: 0;
 	}
 </style>
