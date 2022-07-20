@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-a1ec77de.js",
+    "file": "immutable/start-7b298d77.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -54,7 +54,7 @@
       "$locales/es"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/__layout.svelte-f399b2f7.css"
+      "immutable/assets/pages/_lang_languageCode_/__layout.svelte-7af137f8.css"
     ],
     "assets": [
       "immutable/assets/godot_logo-c55d6a9b.svg",
@@ -65,52 +65,52 @@
     ]
   },
   "src/routes/[lang=languageCode]/about.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/about.svelte-ab4a8fea.js",
+    "file": "immutable/pages/_lang_languageCode_/about.svelte-3f3c68cd.js",
     "src": "src/routes/[lang=languageCode]/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-6d6f8488.js",
-      "_HomepageHero-7e32951e.js",
+      "_HomepageHero-3077012c.js",
       "_Column-a4b0c1c0.js"
     ]
   },
   "src/routes/[lang=languageCode]/download.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/download.svelte-913eb637.js",
+    "file": "immutable/pages/_lang_languageCode_/download.svelte-52df6c88.js",
     "src": "src/routes/[lang=languageCode]/download.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-6d6f8488.js",
-      "_HomepageHero-7e32951e.js",
+      "_HomepageHero-3077012c.js",
       "_Column-a4b0c1c0.js"
     ]
   },
   "src/routes/[lang=languageCode]/features.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/features.svelte-69188646.js",
+    "file": "immutable/pages/_lang_languageCode_/features.svelte-2942eb90.js",
     "src": "src/routes/[lang=languageCode]/features.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-6d6f8488.js",
-      "_HomepageHero-7e32951e.js",
+      "_HomepageHero-3077012c.js",
       "_Column-a4b0c1c0.js"
     ]
   },
   "src/routes/[lang=languageCode]/index.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/index.svelte-a737f846.js",
+    "file": "immutable/pages/_lang_languageCode_/index.svelte-32254bfd.js",
     "src": "src/routes/[lang=languageCode]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-6d6f8488.js",
-      "_HomepageHero-7e32951e.js",
+      "_HomepageHero-3077012c.js",
       "_Column-a4b0c1c0.js",
       "_Link-f981f96a.js",
       "_paths-a8dbee7e.js"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/index.svelte-754b1b46.css"
+      "immutable/assets/pages/_lang_languageCode_/index.svelte-63ccb12a.css"
     ],
     "assets": [
       "immutable/assets/godot-889ec8b0.svg",
@@ -122,13 +122,13 @@
     ]
   },
   "src/routes/[lang=languageCode]/news.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/news.svelte-d23f0c34.js",
+    "file": "immutable/pages/_lang_languageCode_/news.svelte-33bf84de.js",
     "src": "src/routes/[lang=languageCode]/news.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-6d6f8488.js",
-      "_HomepageHero-7e32951e.js",
+      "_HomepageHero-3077012c.js",
       "_Column-a4b0c1c0.js"
     ]
   },
@@ -163,14 +163,14 @@
       "immutable/assets/Column-dba79f5e.css"
     ]
   },
-  "_HomepageHero-7e32951e.js": {
-    "file": "immutable/chunks/HomepageHero-7e32951e.js",
+  "_HomepageHero-3077012c.js": {
+    "file": "immutable/chunks/HomepageHero-3077012c.js",
     "imports": [
       "_index-6d6f8488.js",
       "_Column-a4b0c1c0.js"
     ],
     "css": [
-      "immutable/assets/HomepageHero-126ee275.css"
+      "immutable/assets/HomepageHero-24e3d749.css"
     ]
   },
   "$locales/en": {
