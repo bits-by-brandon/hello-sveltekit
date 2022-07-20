@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-6d52565d.js",
+    "file": "immutable/start-29585236.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -38,7 +38,7 @@
     ]
   },
   "src/routes/[lang=languageCode]/__layout.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-46aa8dbb.js",
+    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-7e8ed4bd.js",
     "src": "src/routes/[lang=languageCode]/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
