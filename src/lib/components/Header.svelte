@@ -64,6 +64,9 @@
 								<Link href="/features">News</Link>
 							</li>
 							<li class="submenu-item">
+								<Link href="/features">Community channels</Link>
+							</li>
+							<li class="submenu-item">
 								<Link href="/features">Local groups</Link>
 							</li>
 							<li class="submenu-item">
@@ -121,7 +124,10 @@
 						<span class="parent-item-text">Resources</span>
 						<ul class="submenu">
 							<li class="submenu-item">
-								<Link href="/features">Asset</Link>
+								<Link href="/features">News</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Asset marketplace</Link>
 							</li>
 							<li class="submenu-item">
 								<Link href="/features">Press kit</Link>
