@@ -1,11 +1,11 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-29585236.js",
+    "file": "immutable/start-edd4b5c7.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-53edace8.js",
-      "_paths-70b2dbbc.js",
+      "_index-0e3e2ba0.js",
+      "_paths-3176a40a.js",
       "_languageConfig-ba89ef20.js"
     ],
     "dynamicImports": [
@@ -20,34 +20,34 @@
     ]
   },
   ".svelte-kit/runtime/components/layout.svelte": {
-    "file": "immutable/layout.svelte-6672901b.js",
+    "file": "immutable/layout.svelte-e64d1c19.js",
     "src": ".svelte-kit/runtime/components/layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js"
+      "_index-0e3e2ba0.js"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "immutable/error.svelte-2811d2ee.js",
+    "file": "immutable/error.svelte-23dbcd8f.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js"
+      "_index-0e3e2ba0.js"
     ]
   },
   "src/routes/[lang=languageCode]/__layout.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-7e8ed4bd.js",
+    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-8fd3ad3a.js",
     "src": "src/routes/[lang=languageCode]/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js",
+      "_index-0e3e2ba0.js",
       "_languageConfig-ba89ef20.js",
-      "_Link-8eb5f569.js",
-      "_Column-ae59079a.js",
-      "_paths-70b2dbbc.js"
+      "_Link-6775d631.js",
+      "_Column-a203afd5.js",
+      "_paths-3176a40a.js"
     ],
     "dynamicImports": [
       "$locales/en",
@@ -65,49 +65,49 @@
     ]
   },
   "src/routes/[lang=languageCode]/about.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/about.svelte-1a3128f0.js",
+    "file": "immutable/pages/_lang_languageCode_/about.svelte-e3e84fd4.js",
     "src": "src/routes/[lang=languageCode]/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js",
-      "_HomepageHero-d73fd293.js",
-      "_Column-ae59079a.js"
+      "_index-0e3e2ba0.js",
+      "_HomepageHero-12de24f3.js",
+      "_Column-a203afd5.js"
     ]
   },
   "src/routes/[lang=languageCode]/download.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/download.svelte-0d416c1d.js",
+    "file": "immutable/pages/_lang_languageCode_/download.svelte-29af5e62.js",
     "src": "src/routes/[lang=languageCode]/download.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js",
-      "_HomepageHero-d73fd293.js",
-      "_Column-ae59079a.js"
+      "_index-0e3e2ba0.js",
+      "_HomepageHero-12de24f3.js",
+      "_Column-a203afd5.js"
     ]
   },
   "src/routes/[lang=languageCode]/features.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/features.svelte-5cb08f5f.js",
+    "file": "immutable/pages/_lang_languageCode_/features.svelte-d352ca0e.js",
     "src": "src/routes/[lang=languageCode]/features.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js",
-      "_HomepageHero-d73fd293.js",
-      "_Column-ae59079a.js"
+      "_index-0e3e2ba0.js",
+      "_HomepageHero-12de24f3.js",
+      "_Column-a203afd5.js"
     ]
   },
   "src/routes/[lang=languageCode]/index.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/index.svelte-bb0a1481.js",
+    "file": "immutable/pages/_lang_languageCode_/index.svelte-67470ada.js",
     "src": "src/routes/[lang=languageCode]/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js",
-      "_HomepageHero-d73fd293.js",
-      "_Column-ae59079a.js",
-      "_Link-8eb5f569.js",
-      "_paths-70b2dbbc.js"
+      "_index-0e3e2ba0.js",
+      "_HomepageHero-12de24f3.js",
+      "_Column-a203afd5.js",
+      "_Link-6775d631.js",
+      "_paths-3176a40a.js"
     ],
     "css": [
       "immutable/assets/pages/_lang_languageCode_/index.svelte-63ccb12a.css"
@@ -122,52 +122,52 @@
     ]
   },
   "src/routes/[lang=languageCode]/news.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/news.svelte-5a318aea.js",
+    "file": "immutable/pages/_lang_languageCode_/news.svelte-bf4c6dcf.js",
     "src": "src/routes/[lang=languageCode]/news.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-53edace8.js",
-      "_HomepageHero-d73fd293.js",
-      "_Column-ae59079a.js"
+      "_index-0e3e2ba0.js",
+      "_HomepageHero-12de24f3.js",
+      "_Column-a203afd5.js"
     ]
   },
-  "_index-53edace8.js": {
-    "file": "immutable/chunks/index-53edace8.js"
+  "_index-0e3e2ba0.js": {
+    "file": "immutable/chunks/index-0e3e2ba0.js"
   },
-  "_paths-70b2dbbc.js": {
-    "file": "immutable/chunks/paths-70b2dbbc.js",
+  "_paths-3176a40a.js": {
+    "file": "immutable/chunks/paths-3176a40a.js",
     "imports": [
-      "_index-53edace8.js"
+      "_index-0e3e2ba0.js"
     ]
   },
   "_languageConfig-ba89ef20.js": {
     "file": "immutable/chunks/languageConfig-ba89ef20.js"
   },
-  "_Link-8eb5f569.js": {
-    "file": "immutable/chunks/Link-8eb5f569.js",
+  "_Link-6775d631.js": {
+    "file": "immutable/chunks/Link-6775d631.js",
     "imports": [
-      "_paths-70b2dbbc.js",
-      "_index-53edace8.js"
+      "_paths-3176a40a.js",
+      "_index-0e3e2ba0.js"
     ],
     "css": [
       "immutable/assets/Link-64e75345.css"
     ]
   },
-  "_Column-ae59079a.js": {
-    "file": "immutable/chunks/Column-ae59079a.js",
+  "_Column-a203afd5.js": {
+    "file": "immutable/chunks/Column-a203afd5.js",
     "imports": [
-      "_index-53edace8.js"
+      "_index-0e3e2ba0.js"
     ],
     "css": [
       "immutable/assets/Column-dba79f5e.css"
     ]
   },
-  "_HomepageHero-d73fd293.js": {
-    "file": "immutable/chunks/HomepageHero-d73fd293.js",
+  "_HomepageHero-12de24f3.js": {
+    "file": "immutable/chunks/HomepageHero-12de24f3.js",
     "imports": [
-      "_index-53edace8.js",
-      "_Column-ae59079a.js"
+      "_index-0e3e2ba0.js",
+      "_Column-a203afd5.js"
     ],
     "css": [
       "immutable/assets/HomepageHero-24e3d749.css"
