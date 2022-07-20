@@ -58,6 +58,24 @@
 					</li>
 
 					<li class="parent-item">
+						<span class="parent-item-text">Contribute</span>
+						<ul class="submenu">
+							<li class="submenu-item">
+								<Link href="/features">Donate</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Contribute code</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Improve the docs</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Report</Link>
+							</li>
+						</ul>
+					</li>
+
+					<li class="parent-item">
 						<span class="parent-item-text">News & Community</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -98,24 +116,6 @@
 							</li>
 							<li class="submenu-item">
 								<Link href="/features">License</Link>
-							</li>
-						</ul>
-					</li>
-
-					<li class="parent-item">
-						<span class="parent-item-text">Contribute</span>
-						<ul class="submenu">
-							<li class="submenu-item">
-								<Link href="/features">Donate</Link>
-							</li>
-							<li class="submenu-item">
-								<Link href="/features">Contribute code</Link>
-							</li>
-							<li class="submenu-item">
-								<Link href="/features">Improve the docs</Link>
-							</li>
-							<li class="submenu-item">
-								<Link href="/features">Report</Link>
 							</li>
 						</ul>
 					</li>
