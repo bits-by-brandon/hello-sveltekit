@@ -7,7 +7,7 @@
 
 <div
 	class="node"
-	style:color={isActive ? activeColor : '#555'}
+	style:color={isActive ? activeColor : 'var(--neutral-500)'}
 	style:left={`${x}px`}
 	style:top={`${y}px`}
 	class:isActive
@@ -18,6 +18,8 @@
 
 <style>
 	.node {
+		width: 26px;
+		height: 26px;
 		position: absolute;
 		cursor: pointer;
 		transition: color 80ms linear;
