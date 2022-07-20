@@ -15,8 +15,16 @@
 					</Link>
 				</div>
 				<ul>
-					<li class="menu-item">
-						<Link href="/features">Features</Link>
+					<li class="parent-item">
+						<span class="parent-item-text">Why Godot?</span>
+						<ul class="submenu">
+							<li class="submenu-item">
+								<Link href="/features">Features</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Showcase</Link>
+							</li>
+						</ul>
 					</li>
 
 					<li class="parent-item">
@@ -42,6 +50,27 @@
 							</li>
 							<li class="submenu-item">
 								<Link href="/features">Tutorials</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Godot for education</Link>
+							</li>
+						</ul>
+					</li>
+
+					<li class="parent-item">
+						<span class="parent-item-text">Community</span>
+						<ul class="submenu">
+							<li class="submenu-item">
+								<Link href="/features">News</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Local groups</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Events</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Q & A</Link>
 							</li>
 						</ul>
 					</li>
@@ -88,8 +117,16 @@
 						</ul>
 					</li>
 
-					<li class="menu-item">
-						<Link href="/features">Assets</Link>
+					<li class="parent-item">
+						<span class="parent-item-text">Resources</span>
+						<ul class="submenu">
+							<li class="submenu-item">
+								<Link href="/features">Asset</Link>
+							</li>
+							<li class="submenu-item">
+								<Link href="/features">Press kit</Link>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</nav>
@@ -169,6 +206,7 @@
 
 	.parent-item {
 		position: relative;
+		font-size: var(--text-sm);
 		color: var(--text-color);
 		padding: var(--spacing-16) var(--spacing-24);
 		cursor: pointer;
