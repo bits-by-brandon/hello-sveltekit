@@ -58,7 +58,7 @@
 					</li>
 
 					<li class="parent-item">
-						<span class="parent-item-text">Community</span>
+						<span class="parent-item-text">News & Community</span>
 						<ul class="submenu">
 							<li class="submenu-item">
 								<Link href="/features">News</Link>
@@ -137,7 +137,7 @@
 				</ul>
 			</nav>
 
-			<Link type="button" href="/download">{$t('global.download')}</Link>
+			<Link type="button" href="/download">Download</Link>
 		</div>
 	</Container>
 </header>
