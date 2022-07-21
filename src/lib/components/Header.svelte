@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { t, locale } from 'svelte-intl-precompile';
 	import logo from '$assets/images/godot_logo.svg';
 	import Link from '$components/Link.svelte';
 	import Container from '$components/layout/Container.svelte';
@@ -15,7 +14,7 @@
 					</Link>
 				</div>
 				<ul>
-					<li class="parent-item">
+					<li class="parent-item" tabindex="0">
 						<span class="parent-item-text">Why Godot?</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -27,7 +26,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item">
+					<li class="parent-item" tabindex="0">
 						<span class="parent-item-text">Use cases</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -42,7 +41,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item">
+					<li class="parent-item" tabindex="0">
 						<span class="parent-item-text">Learn</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -57,7 +56,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item">
+					<li class="parent-item" tabindex="0">
 						<span class="parent-item-text">Contribute</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -75,7 +74,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item">
+					<li class="parent-item" tabindex="0">
 						<span class="parent-item-text">News & Community</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -96,7 +95,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item">
+					<li class="parent-item" tabindex="0">
 						<span class="parent-item-text">About</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -120,7 +119,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item">
+					<li class="parent-item" tabindex="0">
 						<span class="parent-item-text">Resources</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -137,7 +136,7 @@
 				</ul>
 			</nav>
 
-			<Link type="button" href="/download">Download</Link>
+			<Link type="button" href="/download">Try for free</Link>
 		</div>
 	</Container>
 </header>
@@ -215,18 +214,13 @@
 		font-size: var(--text-sm);
 		color: var(--text-color);
 		padding: var(--spacing-16) var(--spacing-24);
-		cursor: pointer;
+		cursor: context-menu;
 
-		&:before {
-			content: '';
-			position: absolute;
-			left: 10px;
-			top: 50%;
-			width: 4px;
-			height: 4px;
-			border-bottom: 1px solid var(--section-stroke-color);
-			border-right: 1px solid var(--section-stroke-color);
-			transform: translateY(-50%) rotate(45deg);
+		&:focus,
+		&:hover {
+			outline: none;
+			background: var(--header-border-color);
+			color: var(--secondary-color);
 		}
 	}
 
@@ -244,14 +238,15 @@
 		opacity: 0;
 		transform: translateY(-10px);
 		pointer-events: none;
-		transition: opacity 100ms linear, transform 200ms cubic-bezier(0.32, 0.01, 0.85, -0.17);
 
+		&:focus-within,
 		&:hover,
+		.parent-item:focus &,
 		.parent-item:hover & {
 			opacity: 1;
 			transform: translateY(0);
 			pointer-events: all;
-			transition: opacity 300ms linear, transform 300ms cubic-bezier(0, 0.53, 0.22, 0.99);
+			transition: opacity 200ms linear, transform 200ms cubic-bezier(0, 0.53, 0.22, 0.99);
 		}
 	}
 
