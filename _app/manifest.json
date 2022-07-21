@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-48095e68.js",
+    "file": "immutable/start-8e263a75.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -38,7 +38,7 @@
     ]
   },
   "src/routes/[lang=languageCode]/__layout.svelte": {
-    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-8e497612.js",
+    "file": "immutable/pages/_lang_languageCode_/__layout.svelte-b9e92cdc.js",
     "src": "src/routes/[lang=languageCode]/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -54,7 +54,7 @@
       "$locales/es"
     ],
     "css": [
-      "immutable/assets/pages/_lang_languageCode_/__layout.svelte-a56c35ee.css"
+      "immutable/assets/pages/_lang_languageCode_/__layout.svelte-cd4642ac.css"
     ],
     "assets": [
       "immutable/assets/godot_logo-c55d6a9b.svg",
