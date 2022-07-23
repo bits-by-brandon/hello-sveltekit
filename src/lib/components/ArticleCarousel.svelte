@@ -4,11 +4,11 @@
 
 	export let supertext = '';
 	export let title = '';
-	export let articles = [];
+	export let posts: Post[] = [];
 </script>
 
 <Carousel {supertext} {title}>
-	{#each articles as article (article.guid)}
-		<ArticleCard {...article} />
+	{#each posts as post (post.slug)}
+		<ArticleCard {...post} />
 	{/each}
 </Carousel>

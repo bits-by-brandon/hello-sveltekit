@@ -6,9 +6,9 @@
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
-		"skipLibCheck": true,
+		"skipLibCheck": false,
 		"sourceMap": true,
-		"strict": true,
+		"strict": false,
 		"paths": {
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"],
@@ -19,5 +19,6 @@
 			"$assets/*": ["src/assets/*"]
 		}
 	},
-	"include": ["src/index.d.ts"]
+	"include": ["src/**/*.js", "src/**/*.ts", "src/**/*.svelte", "src/index.d.ts"],
+	"exclude": ["node_modules/**", "./.svelte-kit/**"]
 }

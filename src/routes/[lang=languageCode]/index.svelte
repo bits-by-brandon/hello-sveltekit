@@ -16,7 +16,7 @@
 	import image3D from '$assets/images/3d.jpg';
 	import imageLanguage from '$assets/images/language.png';
 
-	export let articles = [];
+	export let posts = [];
 </script>
 
 <svelte:head>
@@ -109,7 +109,7 @@
 <Section>
 	<Row>
 		<Column cols="1/span 4">
-			<ArticleCarousel supertext="News" title="See what's new with Godot" {articles} />
+			<ArticleCarousel supertext="News" title="See what's new with Godot" {posts} />
 		</Column>
 	</Row>
 </Section>

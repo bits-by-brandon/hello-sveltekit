@@ -1,9 +1,15 @@
-type Article = {
-	content: string;
-	contentSnippet: string;
-	guid: string;
-	isoDate: string;
-	link: string;
-	pubDate: string;
+interface ImportMetaEnv {
+	readonly SANITY_PROJECT_ID: string;
+	readonly SANITY_DATASET: string;
+}
+
+interface ImportMeta {
+	readonly env: ImportMetaEnv;
+}
+
+type Post = {
+	slug: string;
+	publishedAt: string;
 	title: string;
+	body: any;
 };

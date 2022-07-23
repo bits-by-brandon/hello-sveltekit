@@ -1,16 +1,16 @@
-<script lang="ts">
+<script>
 	export let title = '';
-	export let link = '';
-	export let contentSnippet = '';
-	export let isoDate = '';
-	$: date = new Date(isoDate).toLocaleDateString(undefined, {
+	export let slug = '';
+	// export let contentSnippet = '';
+	export let publishedAt = '';
+	$: date = new Date(publishedAt).toLocaleDateString(undefined, {
 		month: 'short',
 		day: 'numeric',
 		year: 'numeric'
 	});
 </script>
 
-<a class="article-card" href={link}>
+<a class="article-card" href={slug}>
 	<div class="meta">
 		{#if date}
 			<p class="date text-sm">{date}</p>
@@ -21,9 +21,9 @@
 		<h3>{title}</h3>
 	{/if}
 
-	{#if contentSnippet}
-		<p class="snippet">{contentSnippet}</p>
-	{/if}
+	<!--{#if contentSnippet}-->
+	<!--	<p class="snippet">{contentSnippet}</p>-->
+	<!--{/if}-->
 </a>
 
 <style lang="scss">

@@ -2,7 +2,7 @@
 	"name": "hello-sveltekit",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "NODE_ENV=development vite",
+		"dev": "NODE_ENV=development vite dev",
 		"build": "./scripts/clean-build.sh && vite build",
 		"package": "vite package",
 		"preview": "vite preview",
@@ -16,6 +16,7 @@
 	"devDependencies": {
 		"@fontsource/jetbrains-mono": "^4.5.9",
 		"@playwright/test": "^1.22.2",
+		"@sanity/client": "^3.3.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.34",
 		"@sveltejs/kit": "^1.0.0-next.372",
@@ -35,7 +36,7 @@
 		"svelte-preprocess": "^4.10.6",
 		"tslib": "^2.3.1",
 		"typescript": "^4.7.2",
-		"vite": "^2.9.14"
+		"vite": "^3.0.0"
 	},
 	"type": "module",
 	"dependencies": {
