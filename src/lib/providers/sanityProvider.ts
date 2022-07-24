@@ -23,8 +23,8 @@ export default class SanityProvider {
         body,
         mainImage,
         publishedAt,
-        slug,
         title,
+        "slug": slug.current,
         categories[]->{
 					title, 
 					slug
@@ -32,6 +32,29 @@ export default class SanityProvider {
 			}
 		 `;
 		return this.get<Post>(query, options);
+	}
+
+	/**
+	 * Takes portabletext content and returns plaintext
+	 * @see https://www.sanity.io/docs/presenting-block-text
+	 */
+	static toPlainText(blocks = []) {
+		return (
+			blocks
+				// loop through each block
+				.map((block) => {
+					// if it's not a text block with children,
+					// return nothing
+					if (block._type !== 'block' || !block.children) {
+						return '';
+					}
+					// loop through the children spans, and join the
+					// text strings
+					return block.children.map((child) => child.text).join('');
+				})
+				// join the paragraphs leaving split by two linebreaks
+				.join('\n\n')
+		);
 	}
 
 	// async getSiteSettings() {

@@ -1,7 +1,9 @@
 <script>
+	import Snippet from '$components/Snippet.svelte';
+
 	export let title = '';
 	export let slug = '';
-	// export let contentSnippet = '';
+	export let body = [];
 	export let publishedAt = '';
 	$: date = new Date(publishedAt).toLocaleDateString(undefined, {
 		month: 'short',
@@ -21,9 +23,9 @@
 		<h3>{title}</h3>
 	{/if}
 
-	<!--{#if contentSnippet}-->
-	<!--	<p class="snippet">{contentSnippet}</p>-->
-	<!--{/if}-->
+	{#if body}
+		<Snippet content={body} />
+	{/if}
 </a>
 
 <style lang="scss">
