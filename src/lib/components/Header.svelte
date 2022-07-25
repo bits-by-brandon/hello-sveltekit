@@ -14,7 +14,7 @@
 					</Link>
 				</div>
 				<ul>
-					<li class="parent-item" tabindex="0">
+					<li class="parent-item">
 						<span class="parent-item-text">Why Godot?</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -26,7 +26,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item" tabindex="0">
+					<li class="parent-item">
 						<span class="parent-item-text">Use cases</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -41,7 +41,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item" tabindex="0">
+					<li class="parent-item">
 						<span class="parent-item-text">Learn</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -56,7 +56,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item" tabindex="0">
+					<li class="parent-item">
 						<span class="parent-item-text">Contribute</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -74,11 +74,11 @@
 						</ul>
 					</li>
 
-					<li class="parent-item" tabindex="0">
+					<li class="parent-item">
 						<span class="parent-item-text">News & Community</span>
 						<ul class="submenu">
 							<li class="submenu-item">
-								<Link href="/features">News</Link>
+								<Link href="/news">News</Link>
 							</li>
 							<li class="submenu-item">
 								<Link href="/features">Community channels</Link>
@@ -95,7 +95,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item" tabindex="0">
+					<li class="parent-item">
 						<span class="parent-item-text">About</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -119,7 +119,7 @@
 						</ul>
 					</li>
 
-					<li class="parent-item" tabindex="0">
+					<li class="parent-item">
 						<span class="parent-item-text">Resources</span>
 						<ul class="submenu">
 							<li class="submenu-item">
@@ -143,10 +143,7 @@
 
 <style lang="scss">
 	header {
-		position: sticky;
-		top: 0;
 		background: var(--header-background-color);
-		border-bottom: 1px solid var(--header-border-color);
 		width: 100%;
 		z-index: 10;
 	}
@@ -216,7 +213,7 @@
 		padding: var(--spacing-16) var(--spacing-24);
 		cursor: context-menu;
 
-		&:focus,
+    &:focus-within,
 		&:hover {
 			outline: none;
 			background: var(--header-border-color);

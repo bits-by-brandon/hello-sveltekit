@@ -11,7 +11,6 @@
 	import Image from '$components/Image.svelte';
 	import InteractiveEditor from '$components/InteractiveEditor/InteractiveEditor.svelte';
 
-	import imageHero from '$assets/images/tail-quest-defense-screenshot.png';
 	import image2D from '$assets/images/2d.png';
 	import image3D from '$assets/images/3d.jpg';
 	import imageLanguage from '$assets/images/language.png';
@@ -24,7 +23,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<HomepageHero title={$t('homepage.hero.title')} backgroundImage={imageHero}>
+<HomepageHero title={$t('homepage.hero.title')} >
 	<p slot="body">{$t('homepage.hero.body')}</p>
 
 	<Link slot="footer" type="button" href="/download">
@@ -35,6 +34,9 @@
 <Section>
 	<Row>
 		<Column cols="1 / span 2">
+			<InteractiveEditor />
+		</Column>
+		<Column cols="3 / span 2">
 			<CopyBlock
 				supertext={$t('homepage.powerful_tools.supertext')}
 				title={$t('homepage.powerful_tools.title')}
@@ -43,9 +45,6 @@
 					{$t('homepage.powerful_tools.body')}
 				</p>
 			</CopyBlock>
-		</Column>
-		<Column cols="3 / span 2">
-			<InteractiveEditor />
 		</Column>
 	</Row>
 </Section>

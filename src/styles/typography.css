@@ -2,8 +2,9 @@
 
 :root {
 	font-family: 'JetBrains Mono', monospace;
-	--text-xl: 6.4em;
-	--text-lg: 2.4em;
+	--text-xxl: 6.4em;
+	--text-xl: 4.2em;
+	--text-lg: 2.2em;
 	--text-md: 1.6em;
 	--text-base: 1.1em;
 	--text-sm: 0.8em;
@@ -18,6 +19,12 @@ h5,
 h6,
 p {
 	margin-top: 0;
+}
+
+.text-xxl {
+	font-size: var(--text-xxl);
+	font-weight: 600;
+	line-height: 1;
 }
 
 h1,
