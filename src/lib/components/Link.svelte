@@ -41,5 +41,24 @@
 
 	.isLink {
 		color: var(--link-primary-color);
+		position: relative;
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 6px;
+			width: 6px;
+			border-right: 2px solid var(--secondary-color);
+			border-bottom: 2px solid var(--secondary-color);
+			top: 50%;
+			right: -14px;
+			transform: translate(0, -50%) rotate(-45deg);
+			transition: transform 100ms ease-in-out;
+		}
+
+		&:hover:after {
+			transform: translate(6px, -50%) rotate(-45deg);
+		}
 	}
 </style>

@@ -23,7 +23,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<HomepageHero title={$t('homepage.hero.title')} >
+<HomepageHero title={$t('homepage.hero.title')}>
 	<p slot="body">{$t('homepage.hero.body')}</p>
 
 	<Link slot="footer" type="button" href="/download">
@@ -44,6 +44,9 @@
 				<p slot="body">
 					{$t('homepage.powerful_tools.body')}
 				</p>
+				<Link slot="footer">
+					{$t('global.learn_more')}
+				</Link>
 			</CopyBlock>
 		</Column>
 	</Row>
@@ -58,6 +61,9 @@
 					Build crisp and performant 2D games with Godot's dedicated 2D rendering engine with real
 					2D pixel coordinates and 2D nodes. Don't settle for bolted on 2D.
 				</p>
+				<Link slot="footer">
+					{$t('global.learn_more')}
+				</Link>
 			</CopyBlock>
 		</Column>
 		<Column cols="3 / span 2">
@@ -67,6 +73,9 @@
 					Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds
 					and characters.
 				</p>
+				<Link slot="footer">
+					{$t('global.learn_more')}
+				</Link>
 			</CopyBlock>
 		</Column>
 	</Row>
@@ -75,11 +84,16 @@
 <Section>
 	<Row>
 		<Column cols="1 / span 2">
-			<CopyBlock supertext="Polyglot engine" title="Use the right language for the job">
+			<CopyBlock supertext="Polyglot tool" title="Use the right language for the job">
 				<p slot="body">
 					Keep your code modular with an Object oriented API using Godot's own GDScript, C#, C++, or
-					bring your own using GDNative.
+					bring your own using GDNative. With Cross-language scripting, you can get the best of all
+					worlds by writing expressive code in GDScript, and performance critical pieces in C# or
+					C++.
 				</p>
+				<Link slot="footer">
+					{$t('global.learn_more')}
+				</Link>
 			</CopyBlock>
 		</Column>
 		<Column cols="3 / span 2">
@@ -98,7 +112,9 @@
 						Godot is completely free and open-source under the permissive MIT license. Your game is
 						yours, down to the last line of engine code. No royalties, no strings attached.
 					</p>
-					<Link type="button">Learn more</Link>
+					<Link type="button">
+						{$t('global.learn_more')}
+					</Link>
 				</div>
 			</WideCard>
 		</Column>
