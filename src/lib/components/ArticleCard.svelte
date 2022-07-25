@@ -12,7 +12,8 @@
 	});
 </script>
 
-<a class="article-card" href={slug}>
+<!-- TODO: Replace href with slug -->
+<a class="article-card" href="#">
 	<div class="meta">
 		{#if date}
 			<p class="date text-sm">{date}</p>
