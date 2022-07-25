@@ -14,9 +14,6 @@
 		width: 100%;
 		padding: var(--spacing-128) 0;
 		color: var(--text-color);
-	}
-
-	section:nth-of-type(2n) {
-		background: var(--background-color-alt);
+		border-bottom: 1px dashed var(--blue-700);
 	}
 </style>

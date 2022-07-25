@@ -3,7 +3,7 @@
 	import { base } from '$app/paths';
 
 	export let href = '';
-	export let type: 'button' | 'link' | 'inline' = 'link';
+	export let type: 'button' | 'link' | 'inline' = 'inline';
 	$: isButton = type === 'button';
 	$: isLink = type === 'link';
 	$: isInline = type === 'inline';
