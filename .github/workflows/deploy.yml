@@ -20,7 +20,7 @@ jobs:
           node-version-file: .node-version
           check-latest: true
       - name: Install node modules
-        run: npm ci
+        run: npm ci --legacy-peer-deps
       - name: Build static site
         run: npm run build
       - name: Deploy
