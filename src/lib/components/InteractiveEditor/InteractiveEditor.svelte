@@ -35,11 +35,11 @@
 >
 	<div class="interactiveEditor" class:isIntersecting bind:this={containerEl}>
 		<!-- prettier-ignore -->
-		<svg width="591" height="376" viewBox="0 0 591 376" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<rect class="frame" x="1" y="1" width="589" height="374" stroke="white" stroke-width="2" />
-			<path class="node-panel" d="M15 15H79V27H114V246H15V15Z" stroke="white" stroke-width="2" />
-			<rect class="resource-panel" x="15" y="260" width="99" height="101" stroke="white" stroke-width="2" />
-			<path class="preview-panel" d="M128 15H192.5V27.5H576V361H128V15Z" stroke="white" stroke-width="2" />
+		<svg width="646" height="416" viewBox="0 0 646 416" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path class='frame' d="M1 1H645V415H1V1Z" stroke="white" stroke-width="2"/>
+			<path class='node-panel' d="M16.3076 15.017H72.8541V27.0315H191.248V246.296H16.3076V15.017Z" stroke="white" stroke-width="2"/>
+			<rect class='resource-panel' x="16" y="260.313" width="175" height="140.169" stroke="white" stroke-width="2"/>
+			<path class='preview-panel' d="M207 15.017H267.901V28.9427H630V400.483H207V15.017Z" stroke="white" stroke-width="2"/>
 		</svg>
 
 		<!-- prettier-ignore -->
@@ -51,6 +51,7 @@
 
 		<div class="nodes" class:isIntersecting>
 			<Node
+				name="Player"
 				x={42}
 				y={42}
 				activeColor="#478CBF"
@@ -61,6 +62,7 @@
 			</Node>
 
 			<Node
+				name="Sprite"
 				x={60}
 				y={76}
 				activeColor="#F57389"
@@ -71,6 +73,7 @@
 			</Node>
 
 			<Node
+				name="Sound"
 				x={60}
 				y={114}
 				activeColor="#78E5F6"
@@ -81,6 +84,7 @@
 			</Node>
 
 			<Node
+				name="Animation"
 				x={60}
 				y={153}
 				isActive={animationNodeActive}
@@ -104,6 +108,8 @@
 	.node-panel,
 	.resource-panel,
 	.preview-panel {
+		stroke-dasharray: var(--dash-length);
+		stroke-dashoffset: var(--dash-length);
 		transition: stroke-dashoffset 1000ms cubic-bezier(0.48, -0.02, 0.24, 1.03);
 
 		.isIntersecting & {
@@ -112,25 +118,21 @@
 	}
 
 	.frame {
-		stroke-dasharray: 1928px;
-		stroke-dashoffset: 1928px;
+		--dash-length: 2118px;
 	}
 
 	.node-panel {
-		stroke-dasharray: 662px;
-		stroke-dashoffset: 662px;
+		--dash-length: 814px;
 		transition-delay: 200ms;
 	}
 
 	.resource-panel {
-		stroke-dasharray: 400px;
-		stroke-dashoffset: 400px;
-		transition-delay: 400ms;
+		--dash-length: 632px;
+		transition-delay: 300ms;
 	}
 
 	.preview-panel {
-		stroke-dashoffset: 1590px;
-		stroke-dasharray: 1590px;
+		--dash-length: 1618px;
 		transition-delay: 400ms;
 	}
 

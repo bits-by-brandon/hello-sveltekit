@@ -20,12 +20,22 @@
 </div>
 
 <style lang="scss">
+  .preview {
+    position: absolute;
+    top: 220px;
+    left: 420px;
+
+    &.animating {
+      animation: move 3s infinite;
+    }
+  }
+
 	.placeholder {
-		width: 1px;
+		width: 100px;
 		height: 100px;
 		position: absolute;
-		left: 353px;
-		top: 150px;
+		top: -50px;
+    left: -50px;
 		opacity: 0;
 		transition: opacity 100ms linear;
 
@@ -55,16 +65,6 @@
 		}
 	}
 
-	.preview {
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		&.animating {
-			animation: move 3s infinite;
-		}
-	}
-
 	svg,
 	img {
 		display: block;
@@ -74,9 +74,10 @@
 	}
 
 	.sprite {
+		position: absolute;
 		width: 127px;
-		left: 290px;
-		top: 135px;
+		left: -64px;
+		top: -64px;
 
 		&.visible {
 			opacity: 1;
@@ -85,8 +86,8 @@
 
 	.soundwaves {
 		width: 82px;
-		left: 200px;
-		top: 180px;
+		left: -140px;
+		top: -10px;
 
 		&.visible {
 			animation: pulse 1s infinite;
