@@ -3,13 +3,13 @@
     "file": "immutable/assets/2d-5a0978ee.png",
     "src": "src/assets/images/2d.png"
   },
-  "src/assets/images/3d.jpg": {
-    "file": "immutable/assets/3d-bff7fb50.jpg",
-    "src": "src/assets/images/3d.jpg"
-  },
   "src/assets/images/language.png": {
     "file": "immutable/assets/language-6bae0f58.png",
     "src": "src/assets/images/language.png"
+  },
+  "src/assets/images/3d.jpg": {
+    "file": "immutable/assets/3d-bff7fb50.jpg",
+    "src": "src/assets/images/3d.jpg"
   },
   "src/assets/images/godot_logo.svg": {
     "file": "immutable/assets/godot_logo-c55d6a9b.svg",
@@ -40,7 +40,7 @@
     "src": "node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-all-400-normal.woff"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-2c72f9d6.js",
+    "file": "immutable/start-bfe59f2c.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -273,9 +273,9 @@
     "file": "immutable/assets/Section-c7c3539c.css",
     "src": "Section.css"
   },
-  "HomepageHero.css": {
-    "file": "immutable/assets/HomepageHero-7d19d6f5.css",
-    "src": "HomepageHero.css"
+  "Column.css": {
+    "file": "immutable/assets/Column-13218248.css",
+    "src": "Column.css"
   },
   "Link.css": {
     "file": "immutable/assets/Link-ffb05ccb.css",
@@ -285,20 +285,20 @@
     "file": "immutable/assets/Container-2b3b8cdb.css",
     "src": "Container.css"
   },
-  "src/routes/[lang=languageCode]/news.css": {
-    "file": "immutable/assets/news-1ebc0c8d.css",
-    "src": "src/routes/[lang=languageCode]/news.css"
+  "HomepageHero.css": {
+    "file": "immutable/assets/HomepageHero-7d19d6f5.css",
+    "src": "HomepageHero.css"
   },
-  "Column.css": {
-    "file": "immutable/assets/Column-13218248.css",
-    "src": "Column.css"
+  "ArticleCard.css": {
+    "file": "immutable/assets/ArticleCard-4230e2a1.css",
+    "src": "ArticleCard.css"
   },
   "src/routes/[lang=languageCode]/index.css": {
     "file": "immutable/assets/index-38ff0cc3.css",
     "src": "src/routes/[lang=languageCode]/index.css"
   },
-  "ArticleCard.css": {
-    "file": "immutable/assets/ArticleCard-4230e2a1.css",
-    "src": "ArticleCard.css"
+  "src/routes/[lang=languageCode]/news.css": {
+    "file": "immutable/assets/news-1ebc0c8d.css",
+    "src": "src/routes/[lang=languageCode]/news.css"
   }
 }
