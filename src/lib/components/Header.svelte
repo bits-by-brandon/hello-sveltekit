@@ -13,7 +13,7 @@
 						<img alt="Godot Logo" src={logo} />
 					</Link>
 				</div>
-				<ul>
+				<ul class="parent-list">
 					<li class="parent-item">
 						<span class="parent-item-text">Why Godot?</span>
 						<ul class="submenu">
@@ -22,15 +22,6 @@
 							</li>
 							<li class="submenu-item">
 								<Link href="/features">Showcase</Link>
-							</li>
-						</ul>
-					</li>
-
-					<li class="parent-item">
-						<span class="parent-item-text">Use cases</span>
-						<ul class="submenu">
-							<li class="submenu-item">
-								<Link href="/features">Building games</Link>
 							</li>
 							<li class="submenu-item">
 								<Link href="/features">Creating apps</Link>
@@ -136,7 +127,7 @@
 				</ul>
 			</nav>
 
-			<Link type="button" href="/download">Try for free</Link>
+			<Link appearance="button" href="/download">Try for free</Link>
 		</div>
 	</Container>
 </header>
@@ -146,6 +137,7 @@
 		background: var(--header-background-color);
 		width: 100%;
 		z-index: 10;
+		border-bottom: 1px solid var(--header-border-color);
 	}
 
 	.outer {
@@ -183,27 +175,11 @@
 		align-items: center;
 		list-style: none;
 		background-size: contain;
+		z-index: 1;
 	}
 
 	li {
 		position: relative;
-	}
-
-	li.active:before {
-		--spacing: var(--spacing-12);
-		content: '';
-		position: absolute;
-		left: calc(var(--spacing) / -2);
-		top: calc(var(--spacing) / -2);
-		width: calc(100% + var(--spacing));
-		height: calc(100% + var(--spacing));
-		background: var(--neutral-600);
-		z-index: -1;
-	}
-
-	.menu-item {
-		color: var(--text-color);
-		padding: var(--spacing-16) var(--spacing-24);
 	}
 
 	.parent-item {
@@ -213,7 +189,7 @@
 		padding: var(--spacing-16) var(--spacing-24);
 		cursor: context-menu;
 
-    &:focus-within,
+		&:focus-within,
 		&:hover {
 			outline: none;
 			background: var(--header-border-color);

@@ -20,22 +20,22 @@
 </div>
 
 <style lang="scss">
-  .preview {
-    position: absolute;
-    top: 220px;
-    left: 420px;
+	.preview {
+		position: absolute;
+		top: 220px;
+		left: 420px;
 
-    &.animating {
-      animation: move 3s infinite;
-    }
-  }
+		&.animating {
+			animation: move 3s infinite;
+		}
+	}
 
 	.placeholder {
 		width: 100px;
 		height: 100px;
 		position: absolute;
 		top: -50px;
-    left: -50px;
+		left: -50px;
 		opacity: 0;
 		transition: opacity 100ms linear;
 
@@ -65,7 +65,6 @@
 		}
 	}
 
-	svg,
 	img {
 		display: block;
 		position: absolute;

@@ -47,9 +47,4 @@
 			transform: translateY(0);
 		}
 	}
-	@media (prefers-reduced-motion) {
-		.animation {
-			transform: translateY(0);
-		}
-	}
 </style>

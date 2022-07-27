@@ -26,7 +26,7 @@
 <HomepageHero title={$t('homepage.hero.title')}>
 	<p slot="body">{$t('homepage.hero.body')}</p>
 
-	<Link slot="footer" type="button" href="/download">
+	<Link slot="footer" appearance="button" href="/download">
 		{$t('global.download')}
 	</Link>
 </HomepageHero>
@@ -44,7 +44,7 @@
 				<p slot="body">
 					{$t('homepage.powerful_tools.body')}
 				</p>
-				<Link type="link" slot="footer">
+				<Link appearance="link" slot="footer">
 					{$t('global.learn_more')}
 				</Link>
 			</CopyBlock>
@@ -61,7 +61,7 @@
 					Build crisp and performant 2D games with Godot's dedicated 2D rendering engine with real
 					2D pixel coordinates and 2D nodes. Don't settle for bolted on 2D.
 				</p>
-				<Link type="link" slot="footer">
+				<Link appearance="link" slot="footer">
 					{$t('global.learn_more')}
 				</Link>
 			</CopyBlock>
@@ -91,7 +91,7 @@
 					worlds by writing expressive code in GDScript, and performance critical pieces in C# or
 					C++.
 				</p>
-				<Link type="link" slot="footer">
+				<Link appearance="link" slot="footer">
 					{$t('global.learn_more')}
 				</Link>
 			</CopyBlock>
@@ -112,7 +112,7 @@
 						Godot is completely free and open-source under the permissive MIT license. Your game is
 						yours, down to the last line of engine code. No royalties, no strings attached.
 					</p>
-					<Link type="button" slot="footer">
+					<Link appearance="button" slot="footer">
 						{$t('global.learn_more')}
 					</Link>
 				</div>

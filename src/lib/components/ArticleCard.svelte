@@ -1,5 +1,6 @@
 <script>
 	import Snippet from '$components/Snippet.svelte';
+	import Link from '$components/Link.svelte';
 
 	export let title = '';
 	export let slug = '';
@@ -13,7 +14,7 @@
 </script>
 
 <!-- TODO: Replace href with slug -->
-<a class="article-card" href="#">
+<Link type="raw" class="article-card" href={`/news/${slug}`}>
 	<div class="meta">
 		{#if date}
 			<p class="date text-sm">{date}</p>
@@ -27,10 +28,10 @@
 	{#if body}
 		<Snippet content={body} />
 	{/if}
-</a>
+</Link>
 
 <style lang="scss">
-	.article-card {
+	:global(.article-card) {
 		border: 2px solid var(--text-color);
 		color: var(--text-color);
 		padding: var(--spacing-24);

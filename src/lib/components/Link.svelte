@@ -3,15 +3,15 @@
 	import { base } from '$app/paths';
 
 	export let href = '';
-	export let type: 'button' | 'link' | 'inline' = 'inline';
-	$: isButton = type === 'button';
-	$: isLink = type === 'link';
-	$: isInline = type === 'inline';
+	export let appearance: 'button' | 'link' | 'inline' | 'raw' = 'inline';
+	$: isButton = appearance === 'button';
+	$: isLink = appearance === 'link';
+	$: isInline = appearance === 'inline';
 	$: stripped_href = href.startsWith('/') ? href.slice(1) : href;
 	$: anchor = `${base}/${$locale}/${stripped_href}`;
 </script>
 
-<a class:isButton class:isLink class:isInline sveltekit:prefetch href={anchor}>
+<a class={$$props.class} class:isButton class:isLink class:isInline sveltekit:prefetch href={anchor}>
 	<slot />
 </a>
 
