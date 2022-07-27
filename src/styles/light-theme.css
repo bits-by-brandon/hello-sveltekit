@@ -1,8 +1,8 @@
 @media (prefers-color-scheme: light) {
 	:root {
 		--header-background-color: var(--neutral-900);
-		--background-color: var(--blue-800);
-		--background-color-alt: var(--neutral-800);
+		--background-color-dark: var(--blue-800);
+		--background-color-light: var(--neutral-800);
 		--section-stroke-color: var(--neutral-100);
 		--card-background-color: var(--neutral-100);
 		--card-text-color: var(--neutral-900);

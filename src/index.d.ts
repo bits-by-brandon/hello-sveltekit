@@ -13,3 +13,9 @@ type Post = {
 	title: string;
 	body: any;
 };
+
+type Sponsor = {
+	title: string;
+	level: string;
+	logo: string;
+};

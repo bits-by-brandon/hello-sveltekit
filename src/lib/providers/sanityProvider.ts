@@ -34,6 +34,16 @@ export default class SanityProvider {
 		return this.get<Post>(query, options);
 	}
 
+	async getSponsors() {
+		const query = `
+	    *[_type == 'sponsor']{
+	      name,
+	      level,
+	      "logo": logo.asset->url,
+	    }`;
+		return this.get<Sponsor[]>(query);
+	}
+
 	/**
 	 * Takes portabletext content and returns plaintext
 	 * @see https://www.sanity.io/docs/presenting-block-text
@@ -56,23 +66,4 @@ export default class SanityProvider {
 				.join('\n\n')
 		);
 	}
-
-	// async getSiteSettings() {
-	// 	const query = `
-	//     *[_type == 'siteSettings'][0]{
-	//       title,
-	//       description,
-	//       footer_text,
-	//       "og_image": og_image.asset->url,
-	//       marquee_override_left,
-	//       marquee_override_right,
-	//       "save_links": save_links[]{name, url},
-	//       "social_links": social_links[]{name, url},
-	//     }`;
-	// 	return this.get<SiteSettings>(query);
-	// }
-
-	// async setSpecimenOwner(specimenId: string, owner: string | null) {
-	// 	return this.client.patch(specimenId).set({ 'nft_data.owner': owner }).commit();
-	// }
 }

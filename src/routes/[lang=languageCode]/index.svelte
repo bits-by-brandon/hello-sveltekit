@@ -14,8 +14,10 @@
 	import image2D from '$assets/images/2d.png';
 	import image3D from '$assets/images/3d.jpg';
 	import imageLanguage from '$assets/images/language.png';
+	import SponsorList from '$components/SponsorList.svelte';
 
 	export let posts = [];
+	export let sponsors = [];
 </script>
 
 <svelte:head>
@@ -40,6 +42,7 @@
 			<CopyBlock
 				supertext={$t('homepage.powerful_tools.supertext')}
 				title={$t('homepage.powerful_tools.title')}
+				stroke
 			>
 				<p slot="body">
 					{$t('homepage.powerful_tools.body')}
@@ -55,7 +58,7 @@
 <Section>
 	<Row alignItems="flex-start">
 		<Column cols="1 / span 2">
-			<CopyBlock title="Dedicated 2D engine">
+			<CopyBlock supertext="Pixel perfection" title="Dedicated 2D engine" stroke>
 				<Image slot="image" src={image2D} bordered />
 				<p slot="body">
 					Build crisp and performant 2D games with Godot's dedicated 2D rendering engine with real
@@ -67,13 +70,13 @@
 			</CopyBlock>
 		</Column>
 		<Column cols="3 / span 2">
-			<CopyBlock title="Simple and powerful 3D">
+			<CopyBlock supertext="Performant Polygons" title="Simple and powerful 3D" stroke>
 				<Image slot="image" src={image3D} bordered />
 				<p slot="body">
-					Godot's 3D nodes give you everything you need to build, animate, and render your 3D worlds
-					and characters.
+					Godot's 3D nodes give you everything you need to build, animate, and render your 3D
+					characters, props, and worlds.
 				</p>
-				<Link slot="footer">
+				<Link appearance="link" slot="footer">
 					{$t('global.learn_more')}
 				</Link>
 			</CopyBlock>
@@ -84,7 +87,7 @@
 <Section>
 	<Row>
 		<Column cols="1 / span 2">
-			<CopyBlock supertext="Polyglot tool" title="Use the right language for the job">
+			<CopyBlock supertext="Polyglot tool" title="Use the right language for the job" stroke>
 				<p slot="body">
 					Keep your code modular with an Object oriented API using Godot's own GDScript, C#, C++, or
 					bring your own using GDNative. With Cross-language scripting, you can get the best of all
@@ -102,12 +105,14 @@
 	</Row>
 </Section>
 
-<Section>
-	<Row>
-		<Column cols="1/span 4">
-			<WideCard>
-				<h2 slot="left">Godot is 100% free and fully Open Source</h2>
-				<div slot="right">
+<Section theme="white">
+	<Row alignItems="start">
+		<Column cols="1 / span 2">
+			<CopyBlock title="Godot is 100% free and fully Open Source" stroke />
+		</Column>
+		<Column cols="3 /span 2">
+			<CopyBlock>
+				<div slot="body">
 					<p>
 						Godot is completely free and open-source under the permissive MIT license. Your game is
 						yours, down to the last line of engine code. No royalties, no strings attached.
@@ -116,7 +121,7 @@
 						{$t('global.learn_more')}
 					</Link>
 				</div>
-			</WideCard>
+			</CopyBlock>
 		</Column>
 	</Row>
 </Section>
@@ -128,3 +133,11 @@
 		</Column>
 	</Row>
 </Section>
+
+<!--<Section>-->
+<!--	<Row>-->
+<!--		<Column cols="1/span 4">-->
+<!--			<SponsorList {sponsors} />-->
+<!--		</Column>-->
+<!--	</Row>-->
+<!--</Section>-->

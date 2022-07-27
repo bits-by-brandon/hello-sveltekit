@@ -11,12 +11,12 @@
 	homepage: {
 		hero: {
 			title: "The game engine you've been waiting for",
-			body: "Build games your way with a powerful, flexible, and easy to use game engine with full open-source freedom. With Godot, there's no limit to what you can create."
+			body: 'Build games your way with Godot: a powerful, flexible, easy-to-use, open-source game engine.'
 		},
 		powerful_tools: {
 			supertext: 'A new way to build',
-			title: "Now you're thinking with Nodes",
-			body: "Godot's node and scene system gives you powerful functionality in a composable package. Need a sprite? Drop in a sprite node to add your art, or use Godot's built-in pathfinding by using a Navigation node."
+			title: 'Build games with Nodes',
+			body: "Godot's node system gives you powerful functionality in a composable package. Use a sprite node to render your game art or drop in powerful pathfinding using a Navigation node."
 		},
 		open_source_callout: {
 			title: 'Godot is 100% free and fully Open Source',

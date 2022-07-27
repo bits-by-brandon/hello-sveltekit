@@ -7,8 +7,9 @@ import SanityProvider from '$lib/providers/sanityProvider';
 export async function get() {
 	const sanity = new SanityProvider();
 	const posts = await sanity.getPosts();
+	const sponsors = await sanity.getSponsors();
 	return {
 		status: 200,
-		body: { posts }
+		body: { posts, sponsors }
 	};
 }

@@ -3,6 +3,7 @@
 
 	export let supertext = '';
 	export let title = '';
+	export let stroke = false;
 </script>
 
 <div class="copy-block">
@@ -11,7 +12,10 @@
 			<slot name="image" />
 		</div>
 	{/if}
-	<AnimatedStroke />
+
+	{#if stroke}
+		<AnimatedStroke />
+	{/if}
 
 	<div class="upper">
 		{#if supertext}
