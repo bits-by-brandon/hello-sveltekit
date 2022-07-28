@@ -6,7 +6,6 @@
 	import Column from '$components/layout/Column.svelte';
 	import Row from '$components/layout/Row.svelte';
 	import Link from '$components/Link.svelte';
-	import WideCard from '$components/WideCard.svelte';
 	import ArticleCarousel from '$components/ArticleCarousel.svelte';
 	import Image from '$components/Image.svelte';
 	import InteractiveEditor from '$components/InteractiveEditor/InteractiveEditor.svelte';
@@ -134,10 +133,10 @@
 	</Row>
 </Section>
 
-<!--<Section>-->
-<!--	<Row>-->
-<!--		<Column cols="1/span 4">-->
-<!--			<SponsorList {sponsors} />-->
-<!--		</Column>-->
-<!--	</Row>-->
-<!--</Section>-->
+<Section>
+	<Row>
+		<Column cols="1/span 4">
+			<SponsorList {sponsors} />
+		</Column>
+	</Row>
+</Section>
