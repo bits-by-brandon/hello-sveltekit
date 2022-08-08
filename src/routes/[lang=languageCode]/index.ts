@@ -7,7 +7,6 @@ import DirectusProvider from '$lib/providers/directusProvider';
 export async function GET() {
 	const database = new DirectusProvider();
 	const posts = await database.getPosts();
-	// const sponsors = await sanity.getSponsors();
 	return {
 		status: 200,
 		body: { posts }

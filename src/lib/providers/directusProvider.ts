@@ -60,21 +60,23 @@ export default class DirectusProvider {
 			page: options.page
 		});
 
-		console.log(responsePosts.data[0]);
-
-		return responsePosts.data.map((post) => ({
-			slug: post.slug,
-			publishedAt: post.publish_date,
-			title: 'hi',
-			image: post.image && `${HOST}/assets/${post.image.id}`,
-			body: this.getTranslatedFieldLanguage(post.translations, 'en-US')
-		}));
+		return responsePosts.data.map((post) => {
+			// TODO: Return fields of current page's locale
+			const translations = this.getTranslatedFieldLanguage(post.translations, 'en-US');
+			return {
+				slug: post.slug,
+				publishedAt: post.publish_date,
+				title: translations.title,
+				image: post.image && `${HOST}/assets/${post.image.id}`,
+				body: translations.body
+			};
+		});
 	}
 
 	getTranslatedFieldLanguage<T extends ResponseTranslatedFields<any>>(
 		languages: T,
 		language: string
-	): T {
+	): T[number] {
 		return languages.find((fields) => fields.languages_id === language);
 	}
 }

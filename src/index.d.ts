@@ -7,6 +7,11 @@ interface ImportMeta {
 	readonly env: ImportMetaEnv;
 }
 
+type LocaleData = {
+	language: string | null;
+	region: string | null;
+};
+
 type Post = {
 	slug: string;
 	publishedAt: string;

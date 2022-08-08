@@ -13,7 +13,6 @@
 	});
 </script>
 
-<!-- TODO: Replace href with slug -->
 <Link type="raw" class="article-card" href={`/news/${slug}`}>
 	<div class="meta">
 		{#if date}
