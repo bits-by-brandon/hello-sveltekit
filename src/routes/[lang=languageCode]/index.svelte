@@ -14,9 +14,9 @@
 	import image3D from '$assets/images/3d.jpg';
 	import imageLanguage from '$assets/images/language.png';
 	import SponsorList from '$components/SponsorList.svelte';
+	import ScaledGraphic from '$components/ScaledGraphic.svelte';
 
 	export let posts = [];
-	export let sponsors = [];
 </script>
 
 <svelte:head>
@@ -35,7 +35,9 @@
 <Section>
 	<Row>
 		<Column cols="1 / span 2">
-			<InteractiveEditor />
+			<ScaledGraphic width={640}>
+				<InteractiveEditor />
+			</ScaledGraphic>
 		</Column>
 		<Column cols="3 / span 2">
 			<CopyBlock
@@ -136,7 +138,7 @@
 <Section>
 	<Row>
 		<Column cols="1/span 4">
-			<SponsorList {sponsors} />
+			<SponsorList />
 		</Column>
 	</Row>
 </Section>

@@ -1,4 +1,7 @@
+import sanitizeHtml from 'sanitize-html';
 import { Directus } from '@directus/sdk';
+
+import { DEFAULT_LANGUAGE } from '$lib/languageConfig';
 
 type ResponseImage = {
 	id: string;
@@ -44,14 +47,18 @@ type Schema = {
 const HOST = 'https://ym36dcoe.directus.app';
 
 export default class DirectusProvider {
-	private client: Directus<Schema>;
+	client: Directus<Schema>;
 
 	constructor() {
 		this.client = new Directus(HOST);
 	}
 
 	async getPosts(
-		options: { limit: number; page: number } = { limit: 25, page: 1 }
+		options: { limit: number; page: number; language: string } = {
+			limit: 25,
+			page: 1,
+			language: DEFAULT_LANGUAGE
+		}
 	): Promise<Post[]> {
 		const posts = this.client.items('Posts');
 		const responsePosts = await posts.readByQuery({
@@ -62,13 +69,19 @@ export default class DirectusProvider {
 
 		return responsePosts.data.map((post) => {
 			// TODO: Return fields of current page's locale
-			const translations = this.getTranslatedFieldLanguage(post.translations, 'en-US');
+			const translations = this.getTranslatedFieldLanguage(post.translations, options.language);
+			const sanitized = sanitizeHtml(translations.body, {
+				allowedTags: [],
+				allowedAttributes: {}
+			});
+
 			return {
 				slug: post.slug,
 				publishedAt: post.publish_date,
 				title: translations.title,
 				image: post.image && `${HOST}/assets/${post.image.id}`,
-				body: translations.body
+				body: translations.body,
+				snippet: sanitized.slice(0, 200) + '...'
 			};
 		});
 	}
