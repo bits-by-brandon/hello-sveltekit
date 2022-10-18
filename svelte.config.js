@@ -22,9 +22,9 @@ const config = {
 		trailingSlash: 'always'
 	},
 
-	experimental: {
-		useVitePreprocess: true
-	}
+	// experimental: {
+	// 	useVitePreprocess: true
+	// }
 };
 
 export default config;

@@ -1,10 +1,9 @@
 <script>
-	import Snippet from '$components/Snippet.svelte';
 	import Link from '$components/Link.svelte';
 
 	export let title = '';
 	export let slug = '';
-	export let body = [];
+	export let snippet = '';
 	export let publishedAt = '';
 	$: date = new Date(publishedAt).toLocaleDateString(undefined, {
 		month: 'short',
@@ -13,7 +12,6 @@
 	});
 </script>
 
-<!-- TODO: Replace href with slug -->
 <Link type="raw" class="article-card" href={`/news/${slug}`}>
 	<div class="meta">
 		{#if date}
@@ -25,8 +23,8 @@
 		<h3>{title}</h3>
 	{/if}
 
-	{#if body}
-		<Snippet content={body} />
+	{#if snippet}
+		<p>{snippet}</p>
 	{/if}
 </Link>
 

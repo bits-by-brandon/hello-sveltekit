@@ -3,7 +3,7 @@ import { base } from '$app/paths';
 import type { RequestEvent, RequestHandlerOutput } from '@sveltejs/kit';
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '$lib/languageConfig.js';
 
-export function get({ request }: RequestEvent): RequestHandlerOutput {
+export function GET({ request }: RequestEvent): RequestHandlerOutput {
 	const languageHeader = request.headers.get('Accept-Language');
 	// Default to english if no redirect headers provided
 	let redirectLanguage = DEFAULT_LANGUAGE;

@@ -6,7 +6,6 @@
 	import Column from '$components/layout/Column.svelte';
 	import Row from '$components/layout/Row.svelte';
 	import Link from '$components/Link.svelte';
-	import WideCard from '$components/WideCard.svelte';
 	import ArticleCarousel from '$components/ArticleCarousel.svelte';
 	import Image from '$components/Image.svelte';
 	import InteractiveEditor from '$components/InteractiveEditor/InteractiveEditor.svelte';
@@ -15,9 +14,9 @@
 	import image3D from '$assets/images/3d.jpg';
 	import imageLanguage from '$assets/images/language.png';
 	import SponsorList from '$components/SponsorList.svelte';
+	import ScaledGraphic from '$components/ScaledGraphic.svelte';
 
 	export let posts = [];
-	export let sponsors = [];
 </script>
 
 <svelte:head>
@@ -36,7 +35,9 @@
 <Section>
 	<Row>
 		<Column cols="1 / span 2">
-			<InteractiveEditor />
+			<ScaledGraphic width={640}>
+				<InteractiveEditor />
+			</ScaledGraphic>
 		</Column>
 		<Column cols="3 / span 2">
 			<CopyBlock
@@ -134,10 +135,10 @@
 	</Row>
 </Section>
 
-<!--<Section>-->
-<!--	<Row>-->
-<!--		<Column cols="1/span 4">-->
-<!--			<SponsorList {sponsors} />-->
-<!--		</Column>-->
-<!--	</Row>-->
-<!--</Section>-->
+<Section>
+	<Row>
+		<Column cols="1/span 4">
+			<SponsorList />
+		</Column>
+	</Row>
+</Section>

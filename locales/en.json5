@@ -1,7 +1,7 @@
 // The localization file for all text on the site
 {
 	global: {
-		download: 'Download for free',
+		download: 'Download',
 		learn_more: 'Learn more'
 	},
 	nav: {
