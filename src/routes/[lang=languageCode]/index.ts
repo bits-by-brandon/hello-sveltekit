@@ -6,9 +6,15 @@ import DirectusProvider from '$lib/providers/directusProvider';
  */
 export async function GET() {
 	const database = new DirectusProvider();
-	const posts = await database.getPosts();
-	return {
-		status: 200,
-		body: { posts }
-	};
+	try {
+		const posts = await database.getPosts();
+		return {
+			status: 200,
+			body: { posts }
+		};
+	} catch (e) {
+		return {
+			status: 200
+		};
+	}
 }
